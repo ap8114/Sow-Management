@@ -53,9 +53,6 @@ function App() {
             >
               <Routes>
                 <Route path="/companyokr" element={<Company />} />
-           
-
-              
               </Routes>
             </div>
           </div>
