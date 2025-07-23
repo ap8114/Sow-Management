@@ -3,30 +3,16 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAngleDown,
-  faBullseye,
-  faUsers,
-  faUser,
-  faTachometerAlt,
-  faLink,
-  faClipboardList,
-  faSlidersH,
-  faChartPie,
-  faChartLine,
-  faExclamationTriangle,
-  faCalculator,
-  faChartBar,
-  faBook,
-  faDatabase,
-  faTasks,
-  faFileExport,
-  faUserCog,
-  faCogs,
-  faAddressBook,
-  faFileAlt,
   faGear,
+  faChartBar,
+  faUsers,
+  faFileAlt,
+  faUserGear,
+  faChartLine,
+  faCalculator,
+  faAddressBook,
   faCircleDot,
 } from "@fortawesome/free-solid-svg-icons";
-
 import "./Sidebar.css";
 
 const Sidebar = ({ collapsed, setCollapsed }) => {
@@ -45,94 +31,76 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
     if (window.innerWidth <= 768) setCollapsed(true);
   };
 
-  // Define color styles for icons
-  const iconColors = {
-    default: "#6c757d",
-    primary: "#0d6efd",
-    success: "#198754",
-    warning: "#ffc107",
-    danger: "#dc3545",
-    info: "#0dcaf0",
-    purple: "#6f42c1",
-    orange: "#fd7e14",
-  };
-
   const menus = [
     {
       name: "OKRs Management",
       icon: faCircleDot,
-      iconColor: iconColors.primary,
       key: "okrs",
       subItems: [
-        { label: "Set Company OKRs", path: "/okrs/company", icon: faBullseye, iconColor: iconColors.danger },
-        { label: "Department OKRs", path: "/okrs/department", icon: faUsers, iconColor: iconColors.success },
-        { label: "Individual OKRs", path: "/okrs/individual", icon: faUser, iconColor: iconColors.info },
-        { label: "OKR Progress Tracker", path: "/okrs/tracker", icon: faTachometerAlt, iconColor: iconColors.warning },
-        { label: "Alignment & Dependencies", path: "/okrs/alignment", icon: faLink, iconColor: iconColors.orange },
-        { label: "OKR Reports", path: "/okrs/reports", icon: faClipboardList, iconColor: iconColors.purple },
+        { label: "Set Company OKRs", path: "/okrs/company" },
+        { label: "Department OKRs", path: "/okrs/department" },
+        { label: "Individual OKRs", path: "/okrs/individual" },
+        { label: "OKR Progress Tracker", path: "/okrs/tracker" },
+        { label: "Alignment & Dependencies", path: "/okrs/alignment" },
+        { label: "OKR Reports", path: "/okrs/reports" },
       ],
     },
     {
       name: "KPI Tracking",
       icon: faChartLine,
-      iconColor: iconColors.success,
       key: "kpi",
       subItems: [
-        { label: "Define KPIs", path: "/kpi/define", icon: faSlidersH, iconColor: iconColors.danger },
-        { label: "Team KPIs", path: "/kpi/team", icon: faUsers, iconColor: iconColors.success },
-        { label: "Performance Dashboards", path: "/kpi/performance", icon: faChartPie, iconColor: iconColors.primary },
-        { label: "KPI Trends & Analytics", path: "/kpi/trends", icon: faChartLine, iconColor: iconColors.warning },
-        { label: "Alerts / Threshold Management", path: "/kpi/alerts", icon: faExclamationTriangle, iconColor: iconColors.danger },
+        { label: "Define KPIs", path: "/kpi/define" },
+        { label: "Team KPIs", path: "/kpi/team" },
+        { label: "Performance Dashboards", path: "/kpi/performance" },
+        { label: "KPI Trends & Analytics", path: "/kpi/trends" },
+        { label: "Alerts / Threshold Management", path: "/kpi/alerts" },
       ],
     },
     {
       name: "Financial Ratio Analysis",
       icon: faCalculator,
-      iconColor: iconColors.info,
       key: "finance",
       subItems: [
-        { label: "Financial Overview", path: "/finance/overview", icon: faChartPie, iconColor: iconColors.primary },
-        { label: "Ratio Analysis", path: "/finance/ratio", icon: faChartLine, iconColor: iconColors.success },
-        { label: "Liquidity Ratios", path: "/finance/liquidity", icon: faTachometerAlt, iconColor: iconColors.warning },
-        { label: "Profitability Ratios", path: "/finance/profitability", icon: faBullseye, iconColor: iconColors.danger },
-        { label: "Efficiency Ratios", path: "/finance/efficiency", icon: faUsers, iconColor: iconColors.success },
-        { label: "Solvency Ratios", path: "/finance/solvency", icon: faChartBar, iconColor: iconColors.info },
-        { label: "Balance Sheet / P&L", path: "/finance/balance", icon: faBook, iconColor: iconColors.purple },
-        { label: "Custom Financial Metrics", path: "/finance/custom", icon: faClipboardList, iconColor: iconColors.orange },
+        { label: "Financial Overview", path: "/finance/overview" },
+        { label: "Ratio Analysis", path: "/finance/ratio" },
+        { label: "Liquidity Ratios", path: "/finance/liquidity" },
+        { label: "Profitability Ratios", path: "/finance/profitability" },
+        { label: "Efficiency Ratios", path: "/finance/efficiency" },
+        { label: "Solvency Ratios", path: "/finance/solvency" },
+        { label: "Balance Sheet / P&L", path: "/finance/balance" },
+        { label: "Custom Financial Metrics", path: "/finance/custom" },
       ],
     },
     {
       name: "CRM",
       icon: faAddressBook,
-      iconColor: iconColors.danger,
       key: "crm",
       subItems: [
-        { label: "Leads & Prospects", path: "/crm/leads", icon: faBullseye, iconColor: iconColors.danger },
-        { label: "Customer Pipeline", path: "/crm/pipeline", icon: faChartLine, iconColor: iconColors.success },
-        { label: "Contact & Company Database", path: "/crm/database", icon: faDatabase, iconColor: iconColors.primary },
-        { label: "Follow-ups & Tasks", path: "/crm/tasks", icon: faTasks, iconColor: iconColors.orange },
-        { label: "Sales Forecasting", path: "/crm/forecast", icon: faChartBar, iconColor: iconColors.info },
-        { label: "CRM Reports", path: "/crm/reports", icon: faClipboardList, iconColor: iconColors.purple },
+        { label: "Leads & Prospects", path: "/crm/leads" },
+        { label: "Customer Pipeline", path: "/crm/pipeline" },
+        { label: "Contact & Company Database", path: "/crm/database" },
+        { label: "Follow-ups & Tasks", path: "/crm/tasks" },
+        { label: "Sales Forecasting", path: "/crm/forecast" },
+        { label: "CRM Reports", path: "/crm/reports" },
       ],
     },
     {
       name: "Reports",
       icon: faFileAlt,
-      iconColor: iconColors.purple,
       key: "reports",
       subItems: [
-        { label: "View Reports", path: "/reports/view", icon: faBook, iconColor: iconColors.primary },
-        { label: "Export Data", path: "/reports/export", icon: faFileExport, iconColor: iconColors.success },
+        { label: "View Reports", path: "/reports/view" },
+        { label: "Export Data", path: "/reports/export" },
       ],
     },
     {
       name: "Settings",
       icon: faGear,
-      iconColor: iconColors.warning,
       key: "settings",
       subItems: [
-        { label: "User Settings", path: "/settings/user", icon: faUserCog, iconColor: iconColors.info },
-        { label: "System Preferences", path: "/settings/system", icon: faCogs, iconColor: iconColors.danger },
+        { label: "User Settings", path: "/settings/user" },
+        { label: "System Preferences", path: "/settings/system" },
       ],
     },
   ];
@@ -142,9 +110,12 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
       <div className="sidebar">
         <ul className="menu">
           {menus.map((menu, index) => (
-            <ui key={index} className="menu-item">
-              <div className="menu-link" onClick={() => toggleMenu(menu.key)}>
-                <FontAwesomeIcon icon={menu.icon} style={{ color: menu.iconColor }} className="menu-icon me-2" />
+            <li key={index} className="menu-item">
+              <div
+                className="menu-link"
+                onClick={() => toggleMenu(menu.key)}
+              >
+                <FontAwesomeIcon icon={menu.icon} className="menu-icon" />
                 {!collapsed && <span className="menu-text">{menu.name}</span>}
                 {!collapsed && (
                   <FontAwesomeIcon
@@ -161,13 +132,12 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
                       className={`submenu-item ${isActive(sub.path) ? "active-sub" : ""}`}
                       onClick={() => handleNavigate(sub.path)}
                     >
-                      <FontAwesomeIcon icon={sub.icon} style={{ color: sub.iconColor }} className="submenu-icon me-2" />
                       {sub.label}
                     </ul>
                   ))}
                 </ul>
               )}
-            </ui>
+            </li>
           ))}
         </ul>
       </div>
