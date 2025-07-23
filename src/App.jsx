@@ -53,7 +53,7 @@ function App() {
               }`}
             >
               <Routes>
-                <Route path="/companyokr" element={<DepartmentOKRs />} />
+                <Route path="/departmentokrs" element={<DepartmentOKRs />} />
               </Routes>
             </div>
           </div>
