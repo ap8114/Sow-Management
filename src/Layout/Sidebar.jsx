@@ -38,7 +38,7 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
       key: "okrs",
       subItems: [
         { label: "Set Company OKRs", path: "/okrs/company" },
-        { label: "Department OKRs", path: "/okrs/department" },
+        { label: "Department OKRs", path: "/okrs/departmentokrs" },
         { label: "Individual OKRs", path: "/okrs/individual" },
         { label: "OKR Progress Tracker", path: "/okrs/tracker" },
         { label: "Alignment & Dependencies", path: "/okrs/alignment" },
