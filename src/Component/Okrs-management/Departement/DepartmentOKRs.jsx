@@ -4,7 +4,7 @@ const DepartmentOKRs = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className=" bg-white rounded shadow-sm p-3 p-md-4">
+    <div className="">
       {/* Header Section */}
       <div className="mb-3 mb-md-4">
         <h1 className="h2 mb-1 mb-md-2">Department OKRs</h1>
@@ -13,27 +13,28 @@ const DepartmentOKRs = () => {
 
       {/* Department Filter - Responsive Layout */}
       <div className=" row align-items-center mb-3 mb-md-4 g-2">
-        <div className="col-12 col-md-6">
-          <div className="d-flex flex-column flex-md-row gap-2 align-items-center align-items-md-start">
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="btn btn-primary d-flex align-items-center gap-2 w-100 w-md-auto"
-            >
-              <i className="fas fa-plus"></i>
-              <span className="d-none d-md-inline">Add Department OKR</span>
-              <span className="d-md-none">Add OKR</span>
-            </button>
+       <div className="col-12 col-md-6">
+  <div className="d-flex flex-column flex-md-row gap-2 align-items-center align-items-md-start">
+    <button
+      onClick={() => setIsModalOpen(true)}
+      className="btn btn-primary d-flex align-items-center gap-2 flex-shrink-0"
+      style={{minWidth: 'fit-content'}}
+    >
+      <i className="fas fa-plus"></i>
+      <span className="d-none d-md-inline">Add Department OKR</span>
+      <span className="d-md-none">Add OKR</span>
+    </button>
 
-            <div className="w-100 w-md-auto flex-grow-1">
-              <select className="form-select">
-                <option>All Departments</option>
-                <option>Sales</option>
-                <option>Marketing</option>
-                <option>Engineering</option>
-              </select>
-            </div>
-          </div>
-        </div>
+    <div className="w-100">
+      <select className="form-select">
+        <option>All Departments</option>
+        <option>Sales</option>
+        <option>Marketing</option>
+        <option>Engineering</option>
+      </select>
+    </div>
+  </div>
+</div>
 
         <div className="col-12 col-md-6">
           <div className="d-flex justify-content-md-end">

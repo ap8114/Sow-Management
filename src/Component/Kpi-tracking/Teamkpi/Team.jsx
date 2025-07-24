@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Team = () => {
   const [isNewKPIModalOpen, setIsNewKPIModalOpen] = useState(false);
@@ -12,10 +10,10 @@ const Team = () => {
   });
 
   return (
-    <div className="container-fluid p-0 vh-100 bg-light">
+    <div className="">
       {/* Main Content Area */}
-      <main className="p-3 p-md-4 h-100 overflow-auto">
-        <div className="bg-white rounded shadow-sm p-3 p-md-4 h-100">
+      <main className="">
+        <div className="">
           <div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4">
             <div className="mb-3 mb-md-0">
               <h1 className="h3 fw-bold mb-1">Team KPIs</h1>

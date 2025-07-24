@@ -5,10 +5,10 @@ const Companyokrs = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className="container-fluid p-0">
+    <div className="">
       {/* Main Content Area */}
-      <main className="p-4 bg-light">
-        <div className="card shadow-sm p-4">
+      <main className="">
+        <div className="">
           {/* Header Section */}
           <div className="mb-4">
             <h1 className="h2 font-weight-bold text-dark mb-2">Company OKRs</h1>
