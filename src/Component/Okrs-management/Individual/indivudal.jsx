@@ -46,7 +46,7 @@ const Individual = () => {
           {/* OKRs List */}
           <div className="gap-4 d-flex flex-column">
             {/* OKR Card 1 */}
-            <div className="border rounded p-3 p-md-4">
+            <div className="border rounded  bg-white p-3 p-md-4">
               <div className="d-flex flex-column flex-md-row justify-content-between align-items-start gap-3 mb-3 mb-md-4">
                 <div className="flex-grow-1">
                   <div className="d-flex align-items-center gap-3 mb-3">
@@ -97,7 +97,7 @@ const Individual = () => {
             </div>
 
             {/* OKR Card 2 */}
-            <div className="border rounded p-3 p-md-4">
+            <div className="border rounded bg-white p-3 p-md-4">
               <div className="d-flex flex-column flex-md-row justify-content-between align-items-start gap-3 mb-3 mb-md-4">
                 <div className="flex-grow-1">
                   <div className="d-flex align-items-center gap-3 mb-3">
@@ -181,8 +181,8 @@ const Individual = () => {
           {/* Department OKRs Cards */}
           <div className="row g-3 g-md-4">
             {/* Sales Department */}
-            <div className="col-12">
-              <div className="border rounded">
+            <div className="col-12 bg-white">
+              <div className="border rounded ">
                 <div className="bg-blue-50 px-3 px-md-4 py-2 py-md-3 border-bottom">
                   <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
                     <div className="d-flex align-items-center gap-2 gap-md-3">
@@ -234,7 +234,7 @@ const Individual = () => {
             </div>
 
             {/* Engineering Department */}
-            <div className="col-12">
+            <div className="col-12 bg-white">
               <div className="border rounded">
                 <div className="bg-purple-50 px-3 px-md-4 py-2 py-md-3 border-bottom">
                   <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
@@ -312,7 +312,7 @@ const Individual = () => {
           {/* OKRs List - Bottom Section */}
           <div className="d-flex flex-column gap-3 gap-md-4">
             {/* OKR Item */}
-            <div className="border rounded p-3 p-md-4">
+            <div className="border rounded p-3 p-md-4 bg-white">
               <div className="d-flex flex-column flex-md-row justify-content-between align-items-start gap-3 mb-3">
                 <div className="flex-grow-1">
                   <h3 className="h5 fw-semibold mb-2">Increase Market Share</h3>
@@ -336,7 +336,7 @@ const Individual = () => {
               </div>
 
               {/* Key Results */}
-              <div className="mt-3 mt-md-4 d-flex flex-column gap-2 gap-md-3">
+              <div className="mt-3 mt-md-4 d-flex flex-column gap-2 gap-md-3 ">
                 <div className="d-flex flex-column flex-md-row align-items-center justify-content-between p-2 p-md-3 bg-light rounded">
                   <div className="mb-2 mb-md-0">
                     <h5 className="fw-medium mb-1">Expand to 5 new regional markets</h5>
@@ -362,7 +362,7 @@ const Individual = () => {
             </div>
 
             {/* Second OKR Item */}
-            <div className="border rounded p-3 p-md-4">
+            <div className="border rounded p-3 p-md-4 bg-white">
               <div className="d-flex flex-column flex-md-row justify-content-between align-items-start gap-3 mb-3">
                 <div className="flex-grow-1">
                   <h3 className="h5 fw-semibold mb-2">Enhance Product Innovation</h3>

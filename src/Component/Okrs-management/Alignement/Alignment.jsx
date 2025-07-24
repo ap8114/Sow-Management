@@ -151,7 +151,7 @@ const Alignment = () => {
             </div>
             
             {/* Alignment Cards */}
-            <div className="d-flex flex-column gap-4">
+            <div className="d-flex flex-column gap-4 bg-white">
               {alignmentData.map((item, index) => (
                 <div key={index} className="border rounded p-4">
                   <div className="d-flex align-items-center justify-content-between mb-4">
