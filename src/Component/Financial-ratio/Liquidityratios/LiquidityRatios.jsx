@@ -9,13 +9,13 @@ const LiquidityRatios = () => {
   const handleShowExportModal = () => setShowExportModal(true);
 
   return (
-    <div className="container-fluid p-4 bg-light">
+    <div className="">
       {/* Page Header */}
-      <div className="card shadow-sm mb-4">
-        <div className="card-body">
+      <div className="">
+        <div className="">
           <div className="d-flex justify-content-between align-items-center mb-4">
             <div>
-              <h1 className="h2 fw-bold text-dark mb-1">Liquidity Ratios</h1>
+              <h1 className="h2 fw-bold mb-2">Liquidity Ratios</h1>
               <p className="text-muted mb-0">Analysis of company's ability to pay short-term obligations</p>
             </div>
             <div className="d-flex align-items-center gap-3">

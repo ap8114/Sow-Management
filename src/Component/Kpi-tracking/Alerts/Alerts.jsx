@@ -12,7 +12,7 @@ const Alerts = () => {
           <div className="card-body">
             <div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4">
               <div className="mb-3 mb-md-0">
-                <h1 className="h2 font-weight-bold mb-1">Alerts & Thresholds</h1>
+                <h1 className="h2 fw-bold mb-2">Alerts & Thresholds</h1>
                 <p className="text-muted">Manage KPI alerts and threshold settings</p>
               </div>
               <button 

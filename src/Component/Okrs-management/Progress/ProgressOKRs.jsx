@@ -11,7 +11,7 @@ const ProgressOKRs = () => {
         <div className="">
           {/* Header Section */}
           <div className="mb-4">
-            <h1 className="h2 font-weight-bold text-dark mb-2">OKR Progress Tracker</h1>
+            <h1 className="h2 fw-bold mb-2">OKR Progress Tracker</h1>
             <p className="text-muted">Track progress across all objectives and key results</p>
           </div>
 

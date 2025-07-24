@@ -2,12 +2,12 @@ import React from 'react';
 
 const RatioAnalysis = () => {
   return (
-    <div className="container-fluid p-4 bg-light">
-      <div className="card shadow-sm mb-4">
-        <div className="card-body">
+    <div className="">
+      <div className="">
+        <div className="">
           <div className="d-flex justify-content-between align-items-center mb-4">
             <div>
-              <h1 className="h2 fw-bold text-dark">Ratio Analysis</h1>
+              <h1 className="h2 fw-bold mb-2">Ratio Analysis</h1>
               <p className="text-muted">Key financial ratios and comparative analysis</p>
             </div>
             <div className="d-flex align-items-center gap-3">

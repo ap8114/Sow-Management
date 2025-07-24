@@ -4,13 +4,13 @@ const BalanceSheetPage = () => {
   const [selectedMetric, setSelectedMetric] = useState(null);
 
   return (
-    <div className="container-fluid p-4 bg-light">
-      <div className="card shadow-sm mb-4">
-        <div className="card-body">
+    <div className="">
+      <div className="">
+        <div className="">
           {/* Header Section */}
           <div className="d-flex justify-content-between align-items-center mb-4">
             <div>
-              <h1 className="h2 mb-1">Balance Sheet & P&L</h1>
+              <h1 className="h2 fw-bold mb-2">Balance Sheet & P&L</h1>
               <p className="text-muted mb-0">Overview of financial position and performance</p>
             </div>
             <div className="d-flex align-items-center gap-3">
