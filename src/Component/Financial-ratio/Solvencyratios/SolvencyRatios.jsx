@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 const SolvencyRatios = () => {
   const [selectedMetric, setSelectedMetric] = useState(null);
-
+  
   return (
     <div className="">
       <div className="">
