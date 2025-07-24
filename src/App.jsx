@@ -9,6 +9,7 @@ import ForgotPassword from "./Auth/ForgotPassword";
 import Sidebar from "./Layout/Sidebar";
 import DepartmentOKRs from "./Component/Okrs-management/Departement/DepartmentOKRs";
 import Companyokrs from "./Component/Okrs-management/Company/Companyokrs";
+import Indivudal from "./Component/Okrs-management/Individual/indivudal";
 
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
               <Routes>
                 <Route path="okrs/companyokrs" element={<Companyokrs />} />
                 <Route path="okrs/departmentokrs" element={<DepartmentOKRs />} />
+                  <Route path="okrs/individual" element={<Indivudal />} />
               </Routes>
             </div>
           </div>
