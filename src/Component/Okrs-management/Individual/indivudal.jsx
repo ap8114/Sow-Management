@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import IndividualModal from './IndividualModal';
 
 const Individual = () => {
-  const [expandedMenus, setExpandedMenus] = useState([]);
-  const [activeItem, setActiveItem] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
