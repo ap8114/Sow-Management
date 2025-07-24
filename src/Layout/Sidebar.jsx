@@ -20,8 +20,8 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
   const location = useLocation();
   const [activeMenu, setActiveMenu] = useState(null);
 
-  const toggleMenu = (menuName) => {
-    setActiveMenu(activeMenu === menuName ? null : menuName);
+  const toggleMenu = (menuKey) => {
+    setActiveMenu(activeMenu === menuKey ? null : menuKey);
   };
 
   const isActive = (path) => location.pathname === path;
@@ -91,19 +91,13 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
       name: "Reports",
       icon: faFileAlt,
       key: "reports",
-      subItems: [
-        { label: "View Reports", path: "/reports/view" },
-        { label: "Export Data", path: "/reports/export" },
-      ],
+      path: "/reports",
     },
     {
       name: "Settings",
       icon: faGear,
       key: "settings",
-      subItems: [
-        { label: "User Settings", path: "/settings/user" },
-        { label: "System Preferences", path: "/settings/system" },
-      ],
+      path: "/settings",
     },
   ];
 
@@ -114,28 +108,37 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
           {menus.map((menu, index) => (
             <li key={index} className="menu-item">
               <div
-                className="menu-link"
-                onClick={() => toggleMenu(menu.key)}
+                className={`menu-link ${isActive(menu.path) ? "active" : ""}`}
+                onClick={() => {
+                  if (menu.subItems) {
+                    toggleMenu(menu.key);
+                  } else if (menu.path) {
+                    handleNavigate(menu.path);
+                  }
+                }}
               >
                 <FontAwesomeIcon icon={menu.icon} className="menu-icon" />
                 {!collapsed && <span className="menu-text">{menu.name}</span>}
-                {!collapsed && (
+                {/* Show dropdown arrow only if subItems exist */}
+                {!collapsed && menu.subItems && (
                   <FontAwesomeIcon
                     icon={faAngleDown}
                     className={`arrow-icon ${activeMenu === menu.key ? "rotate" : ""}`}
                   />
                 )}
               </div>
-              {!collapsed && activeMenu === menu.key && (
+
+              {/* Render submenu only if subItems exist and the menu is active */}
+              {!collapsed && menu.subItems && activeMenu === menu.key && (
                 <ul className="submenu">
                   {menu.subItems.map((sub, subIndex) => (
-                    <ul
+                    <li
                       key={subIndex}
                       className={`submenu-item ${isActive(sub.path) ? "active-sub" : ""}`}
                       onClick={() => handleNavigate(sub.path)}
                     >
                       {sub.label}
-                    </ul>
+                    </li>
                   ))}
                 </ul>
               )}

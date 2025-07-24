@@ -1,17 +1,12 @@
 import React, { useState } from 'react';
 import AddUserModal from './AddUserModal';
 
-interface UserFormData {
-  name: string;
-  email: string;
-  role: string;
-}
 
 const SettingsPage = () => {
   const [showApiKey, setShowApiKey] = useState(false);
   const [emailNotifications, setEmailNotifications] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [formData, setFormData] = useState<UserFormData>({
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
     role: 'User'
@@ -28,11 +23,11 @@ const SettingsPage = () => {
   };
 
   return (
-    <div className="container-fluid py-4 px-4">
+    <div className="">
       <div className="row">
         <div className="col-12">
           <div className="mb-4">
-            <h1 className="h2">Settings</h1>
+            <h1 className="h2 fw-bold mb-2">Settings</h1>
             <p className="text-muted">Manage and configure your application settings</p>
           </div>
 

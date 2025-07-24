@@ -125,7 +125,7 @@ const KPIModal = ({ show, handleClose }) => {
         </Button>
         <Button variant="primary" onClick={handleClose}>
           <i className="fas fa-download me-2"></i>
-          Export Report
+          Export Reports
         </Button>
       </Modal.Footer>
     </Modal>

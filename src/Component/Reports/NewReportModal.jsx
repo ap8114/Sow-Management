@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
 
-
-
-
-
 const NewReportModal = ({ show, onClose }) => {
   const [newReport, setNewReport] = useState({
     name: '',
