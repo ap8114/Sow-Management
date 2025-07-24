@@ -18,16 +18,23 @@ const Navbar = ({ toggleSidebar }) => {
   }, []);
 
   return (
-    <nav className="navbar navbar-expand px-3 py-2 bg-light shadow-sm d-flex justify-content-between align-items-center fixed-top " >
+    <nav className="navbar navbar-expand px-3 py-2 bg-light shadow-sm d-flex justify-content-between align-items-center fixed-top ">
       {/* Sidebar Toggle + Logo */}
       <div className="d-flex align-items-center gap-3">
         {/* Toggle Button - Always visible */}
-        <button className="btn btn-outline-secondary p-2" onClick={toggleSidebar}>
+        <button
+          className="btn btn-outline-secondary p-2"
+          onClick={toggleSidebar}
+        >
           <FaBars />
         </button>
-
         {/* Logo */}
-        <img src="" alt="Logo" height="40" className="navbar-logo" />
+        <img
+          src="https://i.ibb.co/KpK30Yxz/image-removebg-preview.png"
+          alt="Logo"
+          className="navbar-logo img-fluid"
+          style={{height:"40px" , width: "70px"}}
+          />
       </div>
 
       {/* Search */}
@@ -39,7 +46,9 @@ const Navbar = ({ toggleSidebar }) => {
             placeholder="Search"
             aria-label="Search"
           />
-          <span className="input-group-text"><FaSearch /></span>
+          <span className="input-group-text">
+            <FaSearch />
+          </span>
         </div>
 
         {/* Search icon for mobile */}
@@ -76,20 +85,33 @@ const Navbar = ({ toggleSidebar }) => {
             <ul
               className="dropdown-menu show mt-2 shadow-sm"
               style={{
-                position: 'absolute',
+                position: "absolute",
                 right: 0,
-                minWidth: '180px',
-                maxWidth: 'calc(100vw - 30px)', // Prevent overflow on small screens
-                zIndex: 1000
+                minWidth: "180px",
+                maxWidth: "calc(100vw - 30px)", // Prevent overflow on small screens
+                zIndex: 1000,
               }}
             >
-              <li><Link className="dropdown-item" to="/profile">Profile</Link></li>
-              <li><Link className="dropdown-item" to="settings">Settings</Link></li>
-              <li><hr className="dropdown-divider" /></li>
-              <li><Link className="dropdown-item" to="/">Logout</Link></li>
+              <li>
+                <Link className="dropdown-item" to="/profile">
+                  Profile
+                </Link>
+              </li>
+              <li>
+                <Link className="dropdown-item" to="settings">
+                  Settings
+                </Link>
+              </li>
+              <li>
+                <hr className="dropdown-divider" />
+              </li>
+              <li>
+                <Link className="dropdown-item" to="/">
+                  Logout
+                </Link>
+              </li>
             </ul>
           )}
-
         </div>
       </div>
     </nav>
