@@ -8,8 +8,8 @@ const CustomerPipeline = () => {
   const [filterStatus, setFilterStatus] = useState('all');
 
   return (
-    <div className="container-fluid p-4">
-      <div className="card mb-4">
+    <div className="">
+      <div className="">
         <div className="card-body">
           <div className="d-flex justify-content-between align-items-center mb-4">
             <div>

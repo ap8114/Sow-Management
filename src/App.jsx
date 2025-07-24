@@ -28,6 +28,12 @@ import BalanceSheetPage from "./Component/Financial-ratio/Balancesheet/BalanceSh
 import CustomMetricsPage from "./Component/Financial-ratio/Customfinancialmetrics/CustomMetricsPage";
 import CompanyKPI from "./Component/Kpi-tracking/CompanyKPI/CompanyKPI";
 import IndividualKPI from "./Component/Kpi-tracking/IndividualKPI/IndividualKPI";
+import LeadsPage from "./Component/Crm/Leads & Prospects/LeadsPage";
+import CustomerPipeline from "./Component/Crm/Customer Pipeline/CustomerPipeline";
+import CRMReports from "./Component/Crm/CRM Reports/CRMReports";
+import SalesForecastingPage from "./Component/Crm/Sales Forecasting/SalesForecastingPage";
+import ContactDatabasePage from "./Component/Crm/Contact & Company Database/ContactDatabasePage";
+import Followuptasks from "./Component/Crm/Follow-ups & Tasks/Followuptasks";
 
 
 function App() {
@@ -100,12 +106,12 @@ function App() {
                 <Route path="finance/custom" element={<CustomMetricsPage />} />
 
                 {/* CRM */}
-                <Route path="/crm/leads" element={<CustomMetricsPage />} />
-                <Route path="/crm/pipeline" element={<CustomMetricsPage />} />
-                <Route path="/crm/database" element={<CustomMetricsPage />} />
-                <Route path="/crm/tasks" element={<CustomMetricsPage />} />
-                <Route path="/crm/forecast" element={<CustomMetricsPage />} />
-                <Route path="/crm/reports" element={<CustomMetricsPage />} />
+                <Route path="/crm/leads" element={<LeadsPage />} />
+                <Route path="/crm/pipeline" element={<CustomerPipeline />} />
+                <Route path="/crm/database" element={<ContactDatabasePage />} />
+                <Route path="/crm/tasks" element={<Followuptasks />} />
+                <Route path="/crm/forecast" element={<SalesForecastingPage />} />
+                <Route path="/crm/reports" element={<CRMReports />} />
 
               </Routes>
             </div>

@@ -1,8 +1,8 @@
 // SalesForecastingPage.jsx
 import React, { useState } from 'react';
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-import ReactECharts from 'echarts-for-react';
 import AddDealModal from './AddDealModal';
+import ReactECharts from 'echarts-for-react';
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
 const initialColumns = [
   {
@@ -132,7 +132,7 @@ const SalesForecastingPage = () => {
   };
 
   return (
-    <div className="container-fluid p-4">
+    <div className="">
       <div className="d-flex justify-content-between align-items-center mb-4">
         <div>
           <h1 className="h2">Sales Forecasting</h1>
