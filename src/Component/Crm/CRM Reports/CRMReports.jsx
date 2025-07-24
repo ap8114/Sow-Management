@@ -1,13 +1,13 @@
 // CRMReports.jsx
 import React, { useState, useEffect } from 'react';
-import * as echarts from 'echarts';
 import ReactECharts from 'echarts-for-react';
+import * as echarts from 'echarts'; // 👈 this line is essential
 
 const CRMReports = () => {
   const [selectedPeriod, setSelectedPeriod] = useState('This Month');
   const [selectedReport, setSelectedReport] = useState('sales');
-  const [salesChart, setSalesChart] = useState<echarts.EChartsType | null>(null);
-  const [pipelineChart, setPipelineChart] = useState<echarts.EChartsType | null>(null);
+  const [salesChart, setSalesChart] = useState(null);
+  const [pipelineChart, setPipelineChart] = useState(null);
 
   useEffect(() => {
     const salesChartContainer = document.getElementById('salesChart');
@@ -125,7 +125,7 @@ const CRMReports = () => {
         { value: 484, name: 'Closed' }
       ],
       itemStyle: {
-        color: (params: any) => {
+        color: (params) => {
           const colors = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444'];
           return colors[params.dataIndex];
         }
@@ -134,16 +134,7 @@ const CRMReports = () => {
   });
 
   return (
-    <div className="container-fluid p-4 bg-light">
-      <a
-        href="https://readdy.ai/home/59e09d9b-5824-4cc7-aac1-721a1523f6c4/f7f12ea0-c188-4516-8b1d-c5310f641d5b"
-        data-readdy="true"
-        className="mb-4 d-inline-flex align-items-center text-primary text-decoration-none"
-      >
-        <i className="fas fa-arrow-left me-2"></i>
-        Back to Sales Forecast
-      </a>
-      
+    <div className="">   
       <div className="row mb-4">
         <div className="col-md-6">
           <h1 className="h2">CRM Reports</h1>

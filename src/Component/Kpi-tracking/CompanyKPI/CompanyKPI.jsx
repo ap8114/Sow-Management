@@ -269,6 +269,10 @@ const CompanyKPI = () => {
           </div>
         </div>
       </div>
+
+           {/* Render the modal */}
+      <KPIModal show={showModal} handleClose={handleCloseModal} />
+    </div>
     </div>
   );
 };
