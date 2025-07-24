@@ -22,7 +22,7 @@ const SettingsPage = () => {
   };
 
   return (
-    <div className="container-fluid px-3 px-md-4 py-3">
+    <div className="">
       {/* Header Section */}
       <div className="row">
         <div className="col-12">
