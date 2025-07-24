@@ -18,7 +18,7 @@ const Definekpi = () => {
           <div className="card-body">
             <div className="d-flex justify-content-between align-items-center mb-4">
               <div>
-                <h1 className="h2 font-weight-bold mb-1">Define KPIs</h1>
+                <h1 className="h2 fw-bold mb-2">Define KPIs</h1>
                 <p className="text-muted">Create and manage your key performance indicators</p>
               </div>
               <button 

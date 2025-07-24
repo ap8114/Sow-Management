@@ -11,7 +11,7 @@ const SolvencyRatios = () => {
           {/* Header Section */}
           <div className="d-flex justify-content-between align-items-center mb-4">
             <div>
-              <h1 className="h2 mb-1">Solvency Ratios</h1>
+              <h1 className="h2 fw-bold mb-2">Solvency Ratios</h1>
               <p className="text-muted mb-0">
                 Analysis of company's long-term debt obligations and ability to meet financial commitments
               </p>

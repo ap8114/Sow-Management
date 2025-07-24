@@ -42,7 +42,7 @@ const CustomMetricsPage = () => {
         <div className="">
           <div className="d-flex justify-content-between align-items-center mb-4">
             <div>
-              <h1 className="h2 mb-1 text-dark">Custom Financial Metrics</h1>
+              <h1 className="h2 fw-bold mb-2">Custom Financial Metrics</h1>
               <p className="text-muted">Create and manage your custom financial metrics</p>
             </div>
             <button 
