@@ -40,19 +40,22 @@ const CustomMetricsPage = () => {
     <div className="">
       <div className="">
         <div className="">
-          <div className="d-flex justify-content-between align-items-center mb-4">
-            <div>
-              <h1 className="h2 fw-bold mb-2">Custom Financial Metrics</h1>
-              <p className="text-muted">Create and manage your custom financial metrics</p>
-            </div>
-            <button 
-              onClick={() => setIsMetricModalOpen(true)}
-              className="btn btn-primary d-flex align-items-center gap-2"
-            >
-              <i className="fas fa-plus"></i>
-              <span>Create New Metric</span>
-            </button>
-          </div>
+        <div className="mb-4">
+  <div className="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-3">
+    <div>
+      <h1 className="h2 fw-bold mb-2 mb-sm-1">Custom Financial Metrics</h1>
+      <p className="text-muted mb-0">Create and manage your custom financial metrics</p>
+    </div>
+    <button 
+      onClick={() => setIsMetricModalOpen(true)}
+      className="btn btn-primary d-flex align-items-center justify-content-center gap-2 w-sm-auto"
+    >
+      <i className="fas fa-plus"></i>
+      <span>Create New Metric</span>
+    </button>
+  </div>
+</div>
+
 
           <div className="table-responsive">
             <table className="table table-hover">

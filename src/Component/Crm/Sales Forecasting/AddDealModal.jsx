@@ -31,9 +31,7 @@ const AddDealModal = ({ isOpen, onClose, onSubmit }) => {
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title">Add New Deal</h5>
-            <button type="button" className="close" onClick={onClose}>
-              <span>&times;</span>
-            </button>
+          
           </div>
           <form onSubmit={handleSubmit}>
             <div className="modal-body">

@@ -64,28 +64,35 @@ const ContactDatabasePage = () => {
     <div className="">
       <div className="">
         <div className="">
-          <div className="d-flex justify-content-between align-items-center mb-4">
-            <div>
-              <h1 className="h2 fw-bold mb-2">Contact & Company Database</h1>
-              <p className="text-muted mb-0">Manage your contacts and company information</p>
-            </div>
-            <div className="d-flex gap-2">
-              <button
-                onClick={() => setIsContactModalOpen(true)}
-                className="btn btn-primary d-flex align-items-center gap-2"
-              >
-                <i className="fas fa-user-plus"></i>
-                <span>Add Contact</span>
-              </button>
-              <button
-                onClick={() => setIsCompanyModalOpen(true)}
-                className="btn btn-success d-flex align-items-center gap-2"
-              >
-                <i className="fas fa-building"></i>
-                <span>Add Company</span>
-              </button>
-            </div>
-          </div>
+         <div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4 gap-3">
+  {/* Heading on the left */}
+  <div className="text-start">
+    <h1 className="h2 fw-bold mb-2">Contact & Company Database</h1>
+    <p className="text-muted mb-0">Manage your contacts and company information</p>
+  </div>
+
+  {/* Buttons on the right */}
+  <div className="d-flex flex-column flex-sm-row gap-2 w-100 w-md-auto justify-content-md-end">
+    <button
+      onClick={() => setIsContactModalOpen(true)}
+      className="btn btn-primary d-flex align-items-center justify-content-center gap-2"
+    >
+      <i className="fas fa-user-plus"></i>
+      <span className="d-none d-sm-inline">Add Contact</span>
+      <span className="d-inline d-sm-none">Add</span>
+    </button>
+
+    <button
+      onClick={() => setIsCompanyModalOpen(true)}
+      className="btn btn-success d-flex align-items-center justify-content-center gap-2"
+    >
+      <i className="fas fa-building"></i>
+      <span className="d-none d-sm-inline">Add Company</span>
+      <span className="d-inline d-sm-none">Add</span>
+    </button>
+  </div>
+</div>
+
 
           {/* Filter Tabs */}
           <ul className="nav nav-tabs mb-4">

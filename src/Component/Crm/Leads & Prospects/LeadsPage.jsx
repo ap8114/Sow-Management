@@ -50,16 +50,18 @@ const LeadsPage = () => {
         <div className="card-body">
           <div className="d-flex justify-content-between align-items-center mb-4">
             <div>
-              <h1 className="h2 fw-bold mb-2">Leads & Prospects</h1>
+              <h1 className="h2 fw-bold  mb-2">Leads & Prospects</h1>
               <p className="text-muted mb-0">Manage and track your sales leads</p>
             </div>
-            <button
-              onClick={() => setIsLeadModalOpen(true)}
-              className="btn btn-primary d-flex align-items-center gap-2"
-            >
-              <i className="fas fa-plus"></i>
-              <span>Add New Lead</span>
-            </button>
+           <button
+  onClick={() => setIsLeadModalOpen(true)}
+  className="btn btn-primary d-flex align-items-center justify-content-center gap-2 px-3 py-2 ms-2"
+>
+  <i className="fas fa-plus"></i>
+  <span className="d-none d-sm-inline">Add New Lead</span>
+  <span className="d-inline d-sm-none">Add</span>
+</button>
+
           </div>
 
           <div className="mb-4 d-flex justify-content-between">

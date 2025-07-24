@@ -19,11 +19,11 @@ const Individual = () => {
 
           {/* Filters and Actions - Top Section */}
           <div className="d-flex flex-column flex-md-row justify-content-between align-items-stretch align-items-md-center gap-3 mb-4">
-            <div className="d-flex flex-column flex-sm-row gap-2 w-100 w-md-auto">
+            <div className="d-flex flex-column flex-sm-row gap-2  w-md-auto">
               <button
                 onClick={() => setIsModalOpen(true)}
                 className="btn btn-primary d-flex align-items-center justify-content-center gap-2 flex-shrink-0"
-                style={{ minWidth: 'max-content' }}
+            
               >
                 <i className="fas fa-plus"></i>
                 <span>Add New OKR</span>
@@ -35,8 +35,8 @@ const Individual = () => {
                 <option>Behind</option>
               </select>
             </div>
-            <div className="d-flex justify-content-end w-100 w-md-auto">
-              <select className="form-select" style={{ minWidth: '120px' }}>
+            <div className="d-flex justify-content-end  w-md-auto">
+              <select className="form-select">
                 <option>Q3 2025</option>
                 <option>Q2 2025</option>
                 <option>Q1 2025</option>

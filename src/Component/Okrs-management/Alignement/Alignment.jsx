@@ -137,26 +137,25 @@ const Alignment = () => {
   ];
 
   return (
-    <div className="">
+    <div className="container-fluid px-3 px-md-4 py-3">
       {/* Main Content */}
       <div className="flex-grow-1 d-flex flex-column">
-
         {/* Main Content Area */}
         <main className="">
           <div className="">
             {/* Header Section */}
-            <div className="mb-5">
-              <h1 className="h2 fw-bold mb-2">Alignment & Dependencies</h1>
-              <p className="text-muted">Track dependencies and alignment between teams and objectives</p>
+            <div className="mb-4 mb-md-5">
+              <h1 className="h2 fw-bold mb-1 mb-md-2">Alignment & Dependencies</h1>
+              <p className="text-muted mb-0">Track dependencies and alignment between teams and objectives</p>
             </div>
             
             {/* Alignment Cards */}
-            <div className="d-flex flex-column gap-4">
+            <div className="d-flex flex-column gap-3 gap-md-4">
               {alignmentData.map((item, index) => (
-                <div key={index} className="border rounded p-4">
-                  <div className="d-flex align-items-center justify-content-between mb-4">
-                    <div className="d-flex align-items-center gap-3">
-                      <div className={`rounded p-3 d-flex align-items-center justify-content-center ${
+                <div key={index} className="border rounded p-3 p-md-4">
+                  <div className="d-flex flex-column flex-md-row align-items-md-center justify-content-between mb-3 mb-md-4 gap-2">
+                    <div className="d-flex align-items-center gap-2 gap-md-3">
+                      <div className={`rounded p-2 p-md-3 d-flex align-items-center justify-content-center ${
                         item.department === 'Sales' ? 'bg-blue-100' :
                         item.department === 'Marketing' ? 'bg-purple-100' : 'bg-green-100'
                       }`}>
@@ -165,12 +164,12 @@ const Alignment = () => {
                           item.department === 'Marketing' ? 'fas fa-bullhorn text-purple-600' : 'fas fa-code text-green-600'
                         }`}></i>
                       </div>
-                      <div>
+                      <div className="flex-grow-1">
                         <h3 className="h5 fw-semibold mb-0">{item.objective}</h3>
                         <p className="small text-muted mb-0">{item.department} Department</p>
                       </div>
                     </div>
-                    <div className="d-flex align-items-center gap-3">
+                    <div className="d-flex align-items-center justify-content-between justify-content-md-end gap-2 gap-md-3">
                       <div className="text-end">
                         <div className={`small fw-medium ${
                           item.status === 'on-track' ? 'text-success' :
@@ -180,7 +179,7 @@ const Alignment = () => {
                         </div>
                         <div className="h4 fw-bold mb-0">{item.progress}%</div>
                       </div>
-                      <div className="progress" style={{width: '150px', height: '8px'}}>
+                      <div className="progress" style={{width: '100px', minWidth: '100px', height: '8px'}}>
                         <div
                           className={`progress-bar ${
                             item.status === 'on-track' ? 'bg-success' :
@@ -192,13 +191,13 @@ const Alignment = () => {
                     </div>
                   </div>
                   
-                  <div className="mt-4">
-                    <h4 className="small fw-medium mb-3">Dependencies</h4>
-                    <div className="d-flex flex-column gap-3">
+                  <div className="mt-3 mt-md-4">
+                    <h4 className="small fw-medium mb-2 mb-md-3">Dependencies</h4>
+                    <div className="d-flex flex-column gap-2 gap-md-3">
                       {item.dependencies.map((dep, idx) => (
-                        <div key={idx} className="d-flex align-items-center justify-content-between p-3 bg-light rounded">
-                          <div className="d-flex align-items-center gap-3">
-                            <div className="bg-white rounded p-2 d-flex align-items-center justify-content-center">
+                        <div key={idx} className="d-flex flex-column flex-md-row align-items-md-center justify-content-between p-2 p-md-3 bg-light rounded gap-2">
+                          <div className="d-flex align-items-center gap-2 gap-md-3">
+                            <div className="bg-white rounded p-1 p-md-2 d-flex align-items-center justify-content-center">
                               <i className="fas fa-link text-muted"></i>
                             </div>
                             <div>
@@ -216,7 +215,7 @@ const Alignment = () => {
                               });
                               setIsModalOpen(true);
                             }}
-                            className="btn btn-link btn-sm text-primary"
+                            className="btn btn-link btn-sm text-primary align-self-md-center text-nowrap"
                           >
                             View Details
                           </button>

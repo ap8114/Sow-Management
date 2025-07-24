@@ -16,19 +16,24 @@ const Definekpi = () => {
       <main className="">
         <div className="">
           <div className="card-body">
-            <div className="d-flex justify-content-between align-items-center mb-4">
-              <div>
-                <h1 className="h2 fw-bold mb-2">Define KPIs</h1>
-                <p className="text-muted">Create and manage your key performance indicators</p>
-              </div>
-              <button 
-                onClick={() => setIsNewKPIModalOpen(true)}
-                className="btn btn-primary d-flex align-items-center gap-2"
-              >
-                <i className="fas fa-plus"></i>
-                <span>New KPI</span>
-              </button>
-            </div>
+           <div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 mb-4">
+  {/* Text Block */}
+  <div>
+    <h1 className="h2 fw-bold mb-2 mb-md-1">Define KPIs</h1>
+    <p className="text-muted mb-0">Create and manage your key performance indicators</p>
+  </div>
+
+  {/* Button */}
+  <button 
+    onClick={() => setIsNewKPIModalOpen(true)}
+    className="btn btn-primary d-flex align-items-center gap-2 flex-shrink-0"
+  >
+    <i className="fas fa-plus"></i>
+    <span className="d-none d-sm-inline">New KPI</span>
+    <span className="d-inline d-sm-none">Add</span>
+  </button>
+</div>
+
 
             <div className="row">
               {/* Revenue Growth */}

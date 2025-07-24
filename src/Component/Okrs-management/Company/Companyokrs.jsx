@@ -16,29 +16,37 @@ const Companyokrs = () => {
           </div>
           
           {/* Action Buttons */}
-          <div className="d-flex justify-content-between align-items-center mb-4">
-            <div className="d-flex gap-3">
-              <button 
-                onClick={() => setIsModalOpen(true)} 
-                className="btn btn-primary d-flex align-items-center gap-2"
-              >
-                <i className="fas fa-plus"></i>
-                <span>Add New OKR</span>
-              </button>
-              <button className="btn btn-outline-secondary d-flex align-items-center gap-2">
-                <i className="fas fa-filter"></i>
-                <span>Filter</span>
-              </button>
-            </div>
-            <div className="d-flex align-items-center gap-3">
-              <select className="form-select">
-                <option>Q3 2025</option>
-                <option>Q2 2025</option>
-                <option>Q1 2025</option>
-                <option>Q4 2024</option>
-              </select>
-            </div>
-          </div>
+       <div className="row mb-4">
+  {/* Left Buttons Section */}
+  <div className="col-12 col-md-8 mb-3 mb-md-0">
+    <div className="d-flex flex-column flex-sm-row flex-wrap gap-2">
+      <button
+        onClick={() => setIsModalOpen(true)}
+        className="btn btn-primary d-flex align-items-center gap-2"
+      >
+        <i className="fas fa-plus"></i>
+        <span>Add New OKR</span>
+      </button>
+      <button className="btn btn-outline-secondary d-flex align-items-center gap-2">
+        <i className="fas fa-filter"></i>
+        <span>Filter</span>
+      </button>
+    </div>
+  </div>
+
+  {/* Right Select Dropdown Section */}
+  <div className="col-12 col-md-4">
+    <div className="d-flex justify-content-md-end">
+      <select className="form-select w-100 w-md-auto">
+        <option>Q3 2025</option>
+        <option>Q2 2025</option>
+        <option>Q1 2025</option>
+        <option>Q4 2024</option>
+      </select>
+    </div>
+  </div>
+</div>
+
           
           {/* OKRs List */}
           <div className="mb-4">
@@ -120,7 +128,7 @@ const Companyokrs = () => {
                   </div>
                   <div className="d-flex align-items-center gap-2">
                     <span className="h3 font-weight-bold text-primary">45%</span>
-                    <div className="progress" style={{ width: '130px', height: '8px' }}>
+                    <div className="progress" style={{ width: '120px', height: '8px' }}>
                       <div 
                         className="progress-bar bg-primary" 
                         role="progressbar" 

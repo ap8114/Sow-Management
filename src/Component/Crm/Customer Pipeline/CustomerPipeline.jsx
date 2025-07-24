@@ -16,13 +16,15 @@ const CustomerPipeline = () => {
               <h1 className="h2 fw-bold mb-2">Customer Pipeline</h1>
               <p className="text-muted mb-0">Track and manage your sales pipeline stages</p>
             </div>
-            <button
-              onClick={() => setIsOpportunityModalOpen(true)}
-              className="btn btn-primary"
-            >
-              <i className="fas fa-plus me-2"></i>
-              Add Opportunity
-            </button>
+          <button
+  onClick={() => setIsOpportunityModalOpen(true)}
+  className="btn btn-primary d-flex align-items-center justify-content-center gap-2 px-3 py-2"
+>
+  <i className="fas fa-plus"></i>
+  <span className="d-none d-sm-inline">Add Opportunity</span>
+  <span className="d-inline d-sm-none">Add</span>
+</button>
+
           </div>
 
           <div className="row mb-4">

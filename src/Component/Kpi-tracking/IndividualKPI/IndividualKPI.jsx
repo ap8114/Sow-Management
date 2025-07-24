@@ -72,27 +72,29 @@ const IndividualKPI = () => {
   return (
     <div className="">
       {/* Header Section */}
-      <div className="d-flex justify-content-between align-items-center mb-4">
-        <div>
-          <h1 className="h2 mb-1">Individual KPIs</h1>
-          <p className="text-muted mb-0">Track and manage personal objectives and key results</p>
-        </div>
-        <div className="d-flex gap-3">
-          <Button 
-            variant="primary" 
-            onClick={() => setIsModalOpen(true)}
-            className="d-flex align-items-center gap-2"
-          >
-            <i className="fas fa-plus"></i>
-            Add New KPI
-          </Button>
-          <Button variant="outline-secondary" className="d-flex align-items-center gap-2">
-            <i className="fas fa-filter"></i>
-            Filter
-          </Button>
-        </div>
-      </div>
-
+    <div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4 gap-3">
+  <div>
+    <h1 className="h2 mb-1">Individual KPIs</h1>
+    <p className="text-muted mb-0">Track and manage personal objectives and key results</p>
+  </div>
+  <div className="ms-md-auto d-flex flex-column flex-sm-row gap-2">
+    <Button 
+      variant="primary" 
+      onClick={() => setIsModalOpen(true)}
+      className="d-flex align-items-center justify-content-center gap-2 py-2"
+    >
+      <i className="fas fa-plus"></i>
+      <span>Add New KPI</span>
+    </Button>
+    <Button 
+      variant="outline-secondary" 
+      className="d-flex align-items-center justify-content-center gap-2 py-2"
+    >
+      <i className="fas fa-filter"></i>
+      <span>Filter</span>
+    </Button>
+  </div>
+</div>
       {/* KPI Cards */}
       <div className="row g-4">
         {kpiData.map((kpi) => (

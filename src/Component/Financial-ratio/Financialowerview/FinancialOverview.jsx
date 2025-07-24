@@ -11,17 +11,37 @@ const FinancialOverview = () => {
               <h1 className="h2 fw-bold mb-2">Financial Overview</h1>
               <p className="text-muted">Key financial metrics and performance indicators</p>
             </div>
-            <div className="d-flex align-items-center gap-3">
-              <select className="form-select form-select-sm">
-                <option value="2025">2025</option>
-                <option value="2024">2024</option>
-                <option value="2023">2023</option>
-              </select>
-              <button className="btn btn-primary btn-sm d-flex align-items-center gap-2">
-                <i className="fas fa-download"></i>
-                <span>Export Report</span>
-              </button>
-            </div>
+          <div className="row mb-4">
+  {/* Left Buttons Section */}
+  <div className="col-12 col-md-8 mb-3 mb-md-0">
+    <div className="d-flex flex-column flex-sm-row flex-wrap gap-2">
+      <button
+        onClick={() => setIsModalOpen(true)}
+        className="btn btn-primary d-flex align-items-center gap-2"
+      >
+        <i className="fas fa-plus"></i>
+        <span>Add New OKR</span>
+      </button>
+      <button className="btn btn-outline-secondary d-flex align-items-center gap-2">
+        <i className="fas fa-filter"></i>
+        <span>Filter</span>
+      </button>
+    </div>
+  </div>
+
+  {/* Right Select Dropdown Section */}
+  <div className="col-12 col-md-4">
+    <div className="d-flex justify-content-md-end">
+      <select className="form-select w-100 w-md-auto">
+        <option>Q3 2025</option>
+        <option>Q2 2025</option>
+        <option>Q1 2025</option>
+        <option>Q4 2024</option>
+      </select>
+    </div>
+  </div>
+</div>
+
           </div>
 
           {/* Key Metrics Cards */}

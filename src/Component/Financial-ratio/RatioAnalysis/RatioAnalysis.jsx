@@ -5,23 +5,29 @@ const RatioAnalysis = () => {
     <div className="">
       <div className="">
         <div className="">
-          <div className="d-flex justify-content-between align-items-center mb-4">
-            <div>
-              <h1 className="h2 fw-bold mb-2">Ratio Analysis</h1>
-              <p className="text-muted">Key financial ratios and comparative analysis</p>
-            </div>
-            <div className="d-flex align-items-center gap-3">
-              <select className="form-select">
-                <option value="2025">2025</option>
-                <option value="2024">2024</option>
-                <option value="2023">2023</option>
-              </select>
-              <button className="btn btn-primary d-flex align-items-center gap-2">
-                <i className="fas fa-download"></i>
-                <span>Export Report</span>
-              </button>
-            </div>
-          </div>
+        <div className="row align-items-center mb-4">
+  {/* Left section: Heading + Subtext */}
+  <div className="col-12 col-md-6 mb-3 mb-md-0 ">
+    <h1 className="h2 fw-bold mb-2">Ratio Analysis</h1>
+    <p className="text-muted">Key financial ratios and comparative analysis</p>
+  </div>
+
+  {/* Right section: Dropdown + Button */}
+  <div className="col-12 col-md-6">
+    <div className="d-flex flex-column flex-sm-row justify-content-md-end align-items-stretch gap-2">
+      <select className="form-select w-100 w-sm-auto">
+        <option value="2025">2025</option>
+        <option value="2024">2024</option>
+        <option value="2023">2023</option>
+      </select>
+      <button className="btn btn-primary d-flex align-items-center justify-content-center gap-2 w-100 w-sm-auto">
+        <i className="fas fa-download"></i>
+        <span>Export Report</span>
+      </button>
+    </div>
+  </div>
+</div>
+
 
           {/* Ratio Analysis Grid */}
           <div className="row g-4 mb-4">

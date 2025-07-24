@@ -9,13 +9,7 @@ const Companyokrmodal = ({ show, onClose }) => {
         <div className="modal-content">
           <div className="modal-header border-bottom">
             <h5 className="modal-title font-weight-bold">Create New OKR</h5>
-            <button 
-              type="button" 
-              className="close" 
-              onClick={onClose}
-            >
-              <span>&times;</span>
-            </button>
+           
           </div>
           
           <div className="modal-body">

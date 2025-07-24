@@ -133,30 +133,34 @@ const SalesForecastingPage = () => {
 
   return (
     <div className="">
-      <div className="d-flex justify-content-between align-items-center mb-4">
-        <div>
-          <h1 className="h2 fw-bold mb-2">Sales Forecasting</h1>
-          <p className="text-muted">Track and manage your sales pipeline</p>
-        </div>
-        <div className="d-flex align-items-center gap-3">
-          <select
-            value={selectedPeriod}
-            onChange={(e) => setSelectedPeriod(e.target.value)}
-            className="form-select"
-          >
-            <option>This Month</option>
-            <option>This Quarter</option>
-            <option>This Year</option>
-          </select>
-          <button
-            onClick={() => setIsModalOpen(true)}
-            className="btn btn-primary d-flex align-items-center gap-2"
-          >
-            <i className="fas fa-plus"></i>
-            Add Deal
-          </button>
-        </div>
-      </div>
+     <div className="row align-items-center mb-4">
+  {/* Heading Section - Left on desktop, top on mobile */}
+  <div className="col-12 col-md-6 mb-3 mb-md-0">
+    <h1 className="h2 fw-bold mb-2">Sales Forecasting</h1>
+    <p className="text-muted">Track and manage your sales pipeline</p>
+  </div>
+
+  {/* Button + Select Section - Right on desktop, bottom on mobile */}
+  <div className="col-12 col-md-6 d-flex justify-content-md-end align-items-center gap-3 flex-wrap">
+    <select
+      value={selectedPeriod}
+      onChange={(e) => setSelectedPeriod(e.target.value)}
+      className="form-select w-auto"
+    >
+      <option>This Month</option>
+      <option>This Quarter</option>
+      <option>This Year</option>
+    </select>
+    <button
+      onClick={() => setIsModalOpen(true)}
+      className="btn btn-primary d-flex align-items-center gap-2"
+    >
+      <i className="fas fa-plus"></i>
+      Add Deal
+    </button>
+  </div>
+</div>
+
 
       <div className="row mb-4">
         <div className="col-md-3">
@@ -199,62 +203,65 @@ const SalesForecastingPage = () => {
           <ReactECharts option={getChartOption()} style={{ height: '300px' }} />
         </div>
       </div>
-
-      <DragDropContext onDragEnd={onDragEnd}>
-        <div className="d-flex overflow-auto pb-3" style={{ gap: '1.5rem' }}>
-          {columns.map(column => (
-            <div key={column.id} className="flex-grow-1" style={{ minWidth: '300px' }}>
-              <div className="card">
-                <div className="card-body">
-                  <div className="d-flex justify-content-between align-items-center mb-3">
-                    <h5 className="card-title mb-0">{column.title}</h5>
-                    <span className="text-muted">
-                      ${column.deals.reduce((sum, deal) => sum + deal.value, 0).toLocaleString()}
-                    </span>
-                  </div>
-                  <Droppable droppableId={column.id}>
-                    {(provided) => (
-                      <div
-                        ref={provided.innerRef}
-                        {...provided.droppableProps}
-                        className="d-flex flex-column gap-3"
-                      >
-                        {column.deals.map((deal, index) => (
-                          <Draggable key={deal.id} draggableId={deal.id} index={index}>
-                            {(provided) => (
-                              <div
-                                ref={provided.innerRef}
-                                {...provided.draggableProps}
-                                {...provided.dragHandleProps}
-                                className="card"
-                              >
-                                <div className="card-body">
-                                  <div className="d-flex justify-content-between align-items-center mb-2">
-                                    <h6 className="mb-0">{deal.company}</h6>
-                                    <span className="text-primary fw-bold">
-                                      ${deal.value.toLocaleString()}
-                                    </span>
-                                  </div>
-                                  <p className="small text-muted mb-2">{deal.title}</p>
-                                  <div className="d-flex justify-content-between small text-muted">
-                                    <span>Close: {deal.closeDate}</span>
-                                    <span>{deal.owner}</span>
-                                  </div>
-                                </div>
-                              </div>
-                            )}
-                          </Draggable>
-                        ))}
-                        {provided.placeholder}
-                      </div>
-                    )}
-                  </Droppable>
-                </div>
-              </div>
+<DragDropContext onDragEnd={onDragEnd}>
+  <div className="row g-4">
+    {columns.map((column) => (
+      <div key={column.id} className="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div className="card h-100">
+          <div className="card-body">
+            {/* Column Header */}
+            <div className="d-flex justify-content-between align-items-center mb-3">
+              <h5 className="card-title mb-0">{column.title}</h5>
+              <span className="text-muted">
+                ${column.deals.reduce((sum, deal) => sum + deal.value, 0).toLocaleString()}
+              </span>
             </div>
-          ))}
+
+            {/* Droppable Deals */}
+            <Droppable droppableId={column.id}>
+              {(provided) => (
+                <div
+                  ref={provided.innerRef}
+                  {...provided.droppableProps}
+                  className="d-flex flex-column gap-3"
+                >
+                  {column.deals.map((deal, index) => (
+                    <Draggable key={deal.id} draggableId={deal.id} index={index}>
+                      {(provided) => (
+                        <div
+                          ref={provided.innerRef}
+                          {...provided.draggableProps}
+                          {...provided.dragHandleProps}
+                          className="card"
+                        >
+                          <div className="card-body">
+                            <div className="d-flex justify-content-between align-items-center mb-2">
+                              <h6 className="mb-0">{deal.company}</h6>
+                              <span className="text-primary fw-bold">
+                                ${deal.value.toLocaleString()}
+                              </span>
+                            </div>
+                            <p className="small text-muted mb-2">{deal.title}</p>
+                            <div className="d-flex justify-content-between small text-muted">
+                              <span>Close: {deal.closeDate}</span>
+                              <span>{deal.owner}</span>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    </Draggable>
+                  ))}
+                  {provided.placeholder}
+                </div>
+              )}
+            </Droppable>
+          </div>
         </div>
-      </DragDropContext>
+      </div>
+    ))}
+  </div>
+</DragDropContext>
+
 
       <AddDealModal
         isOpen={isModalOpen}
