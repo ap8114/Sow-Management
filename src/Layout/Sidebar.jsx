@@ -37,7 +37,7 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
       icon: faCircleDot,
       key: "okrs",
       subItems: [
-        { label: "Set Company OKRs", path: "/okrs/company" },
+        { label: "Set Company OKRs", path: "/okrs/companyokrs" },
         { label: "Department OKRs", path: "/okrs/departmentokrs" },
         { label: "Individual OKRs", path: "/okrs/individual" },
         { label: "OKR Progress Tracker", path: "/okrs/tracker" },

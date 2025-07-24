@@ -64,9 +64,7 @@ const Login = () => {
                   <a href="#" className="text-decoration-none small">Forgot Password?</a>
                 </div>
 
-                <button type="submit" className="btn btn-warning w-100 py-2">
-                  Login
-                </button>
+             
               </form>
             </div>
           </div>
