@@ -26,7 +26,7 @@ const ReportsPage = () => {
         <div className="col-12">
           <div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
             <div className="mb-3 mb-md-0">
-              <h1 className="h2 mb-1">Reports Database</h1>
+              <h1 className="h2 fw-bold mb-2">Reports Database</h1>
               <p className="text-muted mb-0">Manage and access your business reports</p>
             </div>
             <div className="d-flex flex-wrap gap-2">
