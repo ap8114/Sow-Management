@@ -70,7 +70,7 @@ const IndividualKPI = () => {
   };
 
   return (
-    <div className="container-fluid py-4 bg-light">
+    <div className="">
       {/* Header Section */}
       <div className="d-flex justify-content-between align-items-center mb-4">
         <div>

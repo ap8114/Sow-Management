@@ -115,7 +115,7 @@ const CompanyKPI = () => {
   const handleCloseModal = () => setShowModal(false);
 
   return (
-    <div className="container-fluid py-4 bg-light">
+    <div className="">
       {/* Header Section */}
       <div className="row mb-4">
         <div className="col-md-6">
@@ -137,8 +137,8 @@ const CompanyKPI = () => {
               ))}
             </select>
           </div>
-          <Button 
-            variant="outline-info" 
+          <Button
+            variant="outline-info"
             onClick={handleShowModal}
             className="me-2"
           >
@@ -163,8 +163,8 @@ const CompanyKPI = () => {
                     <h6 className="text-muted text-uppercase small mb-1">{kpi.title}</h6>
                     <h3 className="mb-0">{kpi.value}</h3>
                   </div>
-                  <span className={`badge ${kpi.trend === 'up' ? 
-                    'bg-success bg-opacity-10 text-success' : 
+                  <span className={`badge ${kpi.trend === 'up' ?
+                    'bg-success bg-opacity-10 text-success' :
                     'bg-danger bg-opacity-10 text-danger'}`}>
                     <i className={`fas fa-arrow-${kpi.trend} me-1`}></i>
                     {Math.abs(kpi.change)}%
