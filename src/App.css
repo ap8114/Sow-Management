@@ -1,5 +1,6 @@
 body, html {
   overflow-x: hidden;
+  background-color: #f8f9fa;
 }
 
 .sidebar-container {
@@ -29,7 +30,7 @@ body, html {
 .right-side-content {
   margin-left: 250px;
   padding: 30px;
-  margin-top: 65px;
+  margin-top: 50px;
   transition: margin-left 0.3s ease;
 }
 
