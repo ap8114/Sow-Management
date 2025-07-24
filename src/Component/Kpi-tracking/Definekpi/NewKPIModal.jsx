@@ -9,13 +9,6 @@ const NewKPIModal = ({ show, onClose, newKPI, setNewKPI }) => {
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title font-weight-bold">Create New KPI</h5>
-            <button 
-              type="button" 
-              className="close" 
-              onClick={onClose}
-            >
-              <span>&times;</span>
-            </button>
           </div>
           
           <div className="modal-body">

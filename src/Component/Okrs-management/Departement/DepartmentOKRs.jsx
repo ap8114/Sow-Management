@@ -2,7 +2,7 @@ import React from 'react';
 
 const DepartmentOKRs = ({ setIsModalOpen }) => {
   return (
-    <div className="bg-white rounded shadow-sm p-4">
+    <div className="">
       {/* Header Section */}
       <div className="mb-4">
         <h1 className="h2 mb-2">Department OKRs</h1>

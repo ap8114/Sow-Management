@@ -11,10 +11,10 @@ const Definekpi = () => {
   });
 
   return (
-    <div className="container-fluid p-0">
+    <div className="">
       {/* Main Content Area */}
-      <main className="p-4 bg-light">
-        <div className="card shadow-sm">
+      <main className="">
+        <div className="">
           <div className="card-body">
             <div className="d-flex justify-content-between align-items-center mb-4">
               <div>
