@@ -21,32 +21,34 @@ const ReportsPage = () => {
 
   return (
     <div className="">
+      {/* Header Section */}
       <div className="row mb-4">
-        <div className="col">
-          <div className="d-flex justify-content-between align-items-center">
-            <div>
-              <h1 className="h2">Reports Database</h1>
+        <div className="col-12">
+          <div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
+            <div className="mb-3 mb-md-0">
+              <h1 className="h2 mb-1">Reports Database</h1>
               <p className="text-muted mb-0">Manage and access your business reports</p>
             </div>
-            <div className="d-flex gap-2">
+            <div className="d-flex flex-wrap gap-2">
               <button
                 onClick={() => setShowNewReportModal(true)}
                 className="btn btn-primary d-flex align-items-center"
               >
-                <i className="fas fa-plus me-2"></i>
-                New Report
+                <i className="fas fa-plus me-1 me-md-2"></i>
+                <span className="d-none d-sm-inline">New Report</span>
               </button>
               <button className="btn btn-success d-flex align-items-center">
-                <i className="fas fa-upload me-2"></i>
-                Import
+                <i className="fas fa-upload me-1 me-md-2"></i>
+                <span className="d-none d-sm-inline">Import</span>
               </button>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Search and Filters Section */}
       <div className="row mb-4">
-        <div className="col-md-8">
+        <div className="col-12 col-md-8 mb-3 mb-md-0">
           <div className="input-group">
             <span className="input-group-text">
               <i className="fas fa-search"></i>
@@ -60,24 +62,26 @@ const ReportsPage = () => {
             />
           </div>
         </div>
-        <div className="col-md-4">
+        <div className="col-12 col-md-4">
           <button
-            className="btn btn-outline-secondary w-100"
+            className="btn btn-outline-secondary w-100 d-flex justify-content-center align-items-center"
             onClick={() => setShowFilters(!showFilters)}
           >
-            <i className="fas fa-filter me-2"></i>
-            Filters
+            <i className="fas fa-filter me-1 me-md-2"></i>
+            <span>Filters</span>
           </button>
         </div>
       </div>
 
+      {/* Filters Card - Only shown when showFilters is true */}
       {showFilters && (
         <div className="row mb-4">
-          <div className="col">
+          <div className="col-12">
             <div className="card">
               <div className="card-body">
                 <div className="row">
-                  <div className="col-md-4 mb-3 mb-md-0">
+                  {/* Type Filter */}
+                  <div className="col-12 col-md-4 mb-3 mb-md-0">
                     <label className="form-label">Type</label>
                     <select
                       className="form-select"
@@ -91,7 +95,9 @@ const ReportsPage = () => {
                       <option value="custom">Custom</option>
                     </select>
                   </div>
-                  <div className="col-md-4 mb-3 mb-md-0">
+
+                  {/* Date Filter */}
+                  <div className="col-12 col-md-4 mb-3 mb-md-0">
                     <label className="form-label">Date</label>
                     <select
                       className="form-select"
@@ -104,7 +110,9 @@ const ReportsPage = () => {
                       <option value="month">This Month</option>
                     </select>
                   </div>
-                  <div className="col-md-4">
+
+                  {/* Format Filter */}
+                  <div className="col-12 col-md-4">
                     <label className="form-label">Format</label>
                     <select
                       className="form-select"
@@ -127,7 +135,7 @@ const ReportsPage = () => {
       <div className="row">
         <div className="col">
           <div className="card">
-            <div className="table-responsive">
+            <div className="table-responsive p-3">
               <table className="table table-hover mb-0">
                 <thead>
                   <tr>
@@ -165,10 +173,10 @@ const ReportsPage = () => {
                       </td>
                       <td>
                         <div className="d-flex gap-3">
-                          <button className="btn btn-sm btn-link text-muted">
+                          <button className="btn btn-sm btn-link text-primary">
                             <i className="fas fa-download"></i>
                           </button>
-                          <button className="btn btn-sm btn-link text-muted">
+                          <button className="btn btn-sm btn-link text-danger">
                             <i className="fas fa-trash"></i>
                           </button>
                         </div>
