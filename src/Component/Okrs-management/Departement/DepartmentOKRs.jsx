@@ -7,7 +7,7 @@ const DepartmentOKRs = () => {
     <div className="">
       {/* Header Section */}
       <div className="mb-3 mb-md-4">
-        <h1 className="h2 mb-1 mb-md-2">Department OKRs</h1>
+        <h1 className="h2 fw-bold mb-2">Department OKRs</h1>
         <p className="text-muted mb-0">Track and manage department-specific objectives and key results</p>
       </div>
 

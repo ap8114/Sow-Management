@@ -4,9 +4,9 @@ const EfficiencyRatios = () => {
   const [selectedMetric, setSelectedMetric] = useState(null);
 
   return (
-    <div className="container-fluid p-4 bg-light">
-      <div className="card mb-4">
-        <div className="card-body">
+    <div className="">
+      <div className="">
+        <div className="">
           <div className="d-flex justify-content-between align-items-center mb-4">
             <div>
               <h1 className="h2 mb-1">Efficiency Ratios</h1>

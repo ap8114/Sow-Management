@@ -11,7 +11,7 @@ const Companyokrs = () => {
         <div className="">
           {/* Header Section */}
           <div className="mb-4">
-            <h1 className="h2 font-weight-bold text-dark mb-2">Company OKRs</h1>
+            <h1 className="h2 fw-bold mb-2">Company OKRs</h1>
             <p className="text-muted">Set and track company-wide objectives and key results</p>
           </div>
           

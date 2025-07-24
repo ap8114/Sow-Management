@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import NewMetricModal from './NewMetricModal';
+import EditMetricModal from './EditMetricModal';
 
 const CustomMetricsPage = () => {
   const [isMetricModalOpen, setIsMetricModalOpen] = useState(false);
-  const [selectedMetric, setSelectedMetric] = useState<string | null>(null);
+  const [selectedMetric, setSelectedMetric] = useState(null);
 
   const customMetrics = [
     {
@@ -35,9 +37,9 @@ const CustomMetricsPage = () => {
   ];
 
   return (
-    <div className="container-fluid p-4 bg-light">
-      <div className="card shadow-sm">
-        <div className="card-body">
+    <div className="">
+      <div className="">
+        <div className="">
           <div className="d-flex justify-content-between align-items-center mb-4">
             <div>
               <h1 className="h2 mb-1 text-dark">Custom Financial Metrics</h1>
@@ -110,12 +112,12 @@ const CustomMetricsPage = () => {
       </div>
 
       {/* Modals */}
-      <NewMetricModal 
+      <NewMetricModal
         show={isMetricModalOpen} 
         onClose={() => setIsMetricModalOpen(false)} 
       />
       
-      <EditMetricModal 
+      <EditMetricModal
         show={!!selectedMetric} 
         onClose={() => setSelectedMetric(null)}
         metricName={selectedMetric || ''}

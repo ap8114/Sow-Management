@@ -18,6 +18,14 @@ import Team from "./Component/Kpi-tracking/Teamkpi/Team";
 import Performancekpi from "./Component/Kpi-tracking/Performance/Performancekpi";
 import Trends from "./Component/Kpi-tracking/TrendsAnalytics/Trends";
 import Alerts from "./Component/Kpi-tracking/Alerts/Alerts";
+import FinancialOverview from "./Component/Financial-ratio/Financialowerview/FinancialOverview";
+import RatioAnalysis from "./Component/Financial-ratio/RatioAnalysis/RatioAnalysis";
+import LiquidityRatios from "./Component/Financial-ratio/Liquidityratios/LiquidityRatios";
+import ProfitabilityRatios from "./Component/Financial-ratio/Profitabilityratios/ProfitabilityRatios";
+import SolvencyRatios from "./Component/Financial-ratio/Solvencyratios/SolvencyRatios";
+import EfficiencyRatios from "./Component/Financial-ratio/Efficiencyratios/EfficiencyRatios";
+import BalanceSheetPage from "./Component/Financial-ratio/Balancesheet/BalanceSheetPage";
+import CustomMetricsPage from "./Component/Financial-ratio/Customfinancialmetrics/CustomMetricsPage";
 
 
 function App() {
@@ -73,9 +81,19 @@ function App() {
                 {/* KPI Tracking */}
                 <Route path="kpi/define" element={<Definekpi />} />
                 <Route path="kpi/team" element={<Team />} />
-                 <Route path="kpi/performance" element={<Performancekpi />} />
-                    <Route path="kpi/trends" element={<Trends />} />
-                       <Route path="kpi/alerts" element={<Alerts/>} />
+                <Route path="kpi/performance" element={<Performancekpi />} />
+                <Route path="kpi/trends" element={<Trends />} />
+                <Route path="kpi/alerts" element={<Alerts />} />
+
+                {/* Financial Ratio */}
+                 <Route path="finance/overview" element={<FinancialOverview />} />
+                 <Route path="finance/ratio" element={<RatioAnalysis />} />
+                 <Route path="finance/liquidity" element={<LiquidityRatios />} />
+                 <Route path="finance/profitability" element={<ProfitabilityRatios />} />
+                 <Route path="finance/solvency" element={<SolvencyRatios />} />
+                 <Route path="finance/efficiency" element={<EfficiencyRatios />} />
+                 <Route path="finance/balance" element={<BalanceSheetPage />} />
+                 <Route path="finance/custom" element={<CustomMetricsPage />} />
 
               </Routes>
             </div>

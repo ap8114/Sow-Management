@@ -2,9 +2,9 @@ import React from 'react';
 
 const FinancialOverview = () => {
   return (
-    <main className="p-4 bg-light">
-      <div className="card shadow-sm">
-        <div className="card-body">
+    <main className="">
+      <div className="">
+        <div className="">
           {/* Page Header */}
           <div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4">
             <div className="mb-3 mb-md-0">
