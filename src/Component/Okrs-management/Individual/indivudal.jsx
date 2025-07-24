@@ -7,7 +7,7 @@ const Individual = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className="container-fluid p-3 p-md-4">
+    <div className="">
       {/* Main Content */}
       <div className="row">
         <main className="col-12">
