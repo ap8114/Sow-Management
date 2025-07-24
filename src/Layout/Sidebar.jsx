@@ -82,7 +82,7 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
         { label: "Leads & Prospects", path: "/crm/leads" },
         { label: "Customer Pipeline", path: "/crm/pipeline" },
         { label: "Contact & Company Database", path: "/crm/database" },
-        { label: "Follow-ups & Tasks", path: "/crm/tasks" },
+        // { label: "Follow-ups & Tasks", path: "/crm/tasks" },
         { label: "Sales Forecasting", path: "/crm/forecast" },
         { label: "CRM Reports", path: "/crm/reports" },
       ],
