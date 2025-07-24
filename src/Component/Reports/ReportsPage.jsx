@@ -135,8 +135,8 @@ const ReportsPage = () => {
       <div className="row">
         <div className="col">
           <div className="card">
-            <div className="table-responsive p-3">
-              <table className="table table-hover mb-0">
+            <div className="table-responsive p-2  ">
+              <table className="table table-hover mb-0  ">
                 <thead>
                   <tr>
                     <th scope="col" className="w-25">Name</th>
