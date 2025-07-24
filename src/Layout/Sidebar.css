@@ -6,6 +6,7 @@
   min-height: 100vh;
   color: white;
   transition: all 0.3s ease;
+  scrollbar-width: none;
 }
 
 .sidebar-container.collapsed {
@@ -25,7 +26,7 @@
 
 .sidebar .menu-text,
 .sidebar .submenu-item {
-  font-size: 1rem; /* Increase text size */
+  font-size: 0.9rem; /* Increase text size */
 }
 .menu-item {
   cursor: pointer;

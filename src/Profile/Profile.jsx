@@ -33,7 +33,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="p-4">
+    <div className="">
       <h2 className="mb-4">User Profile</h2>
 
       {/* Profile Info */}
@@ -77,7 +77,7 @@ const Profile = () => {
           />
         </div>
 
-        <button type="submit" className="btn btn-warning text-white">Update Profile</button>
+        <button type="submit" className="btn btn-primary text-white">Update Profile</button>
       </form>
 
       {/* Password Update */}

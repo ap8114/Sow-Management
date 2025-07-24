@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FaBell, FaSearch, FaUserCircle, FaBars } from "react-icons/fa";
+import { Link } from "react-router-dom";
 // import logo from "./your-logo-path.png"; // Replace with your logo path
 
 const Navbar = ({ toggleSidebar }) => {
@@ -71,23 +72,23 @@ const Navbar = ({ toggleSidebar }) => {
             </div>
           </div>
 
-      {dropdownOpen && (
-  <ul
-    className="dropdown-menu show mt-2 shadow-sm"
-    style={{
-      position: 'absolute',
-      right: 0,
-      minWidth: '180px',
-      maxWidth: 'calc(100vw - 30px)', // Prevent overflow on small screens
-      zIndex: 1000
-    }}
-  >
-    <li><a className="dropdown-item" href="#">Profile</a></li>
-    <li><a className="dropdown-item" href="#">Settings</a></li>
-    <li><hr className="dropdown-divider" /></li>
-    <li><a className="dropdown-item" href="#">Logout</a></li>
-  </ul>
-)}
+          {dropdownOpen && (
+            <ul
+              className="dropdown-menu show mt-2 shadow-sm"
+              style={{
+                position: 'absolute',
+                right: 0,
+                minWidth: '180px',
+                maxWidth: 'calc(100vw - 30px)', // Prevent overflow on small screens
+                zIndex: 1000
+              }}
+            >
+              <li><Link className="dropdown-item" to="/profile">Profile</Link></li>
+              <li><Link className="dropdown-item" to="settings">Settings</Link></li>
+              <li><hr className="dropdown-divider" /></li>
+              <li><Link className="dropdown-item" to="/">Logout</Link></li>
+            </ul>
+          )}
 
         </div>
       </div>

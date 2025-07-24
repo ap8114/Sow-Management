@@ -36,6 +36,7 @@ import ContactDatabasePage from "./Component/Crm/Contact & Company Database/Cont
 import Followuptasks from "./Component/Crm/Follow-ups & Tasks/Followuptasks";
 import ReportsPage from "./Component/Reports/ReportsPage";
 import SettingsPage from "./Component/Settings/SettingsPage";
+import Profile from "./Profile/Profile";
 
 
 function App() {
@@ -120,6 +121,9 @@ function App() {
 
                    {/* Reports */}
                 <Route path="/settings" element={<SettingsPage />} />
+
+                {/* Profile */}
+                 <Route path="/profile" element={<Profile />} />
 
               </Routes>
             </div>
