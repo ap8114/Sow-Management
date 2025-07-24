@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 const Login = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
@@ -64,9 +64,12 @@ const Login = () => {
                   <a href="#" className="text-decoration-none small">Forgot Password?</a>
                 </div>
 
-                <button type="submit" className="btn btn-warning w-100 py-2">
+                <Link to="/okrs/companyokrs" className="text-decoration-none">
+                 <button type="submit" className="btn btn-warning w-100 py-2">
                   Login
                 </button>
+                </Link>
+               
               </form>
             </div>
           </div>

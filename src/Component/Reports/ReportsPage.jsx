@@ -23,17 +23,10 @@ const ReportsPage = () => {
     <div className="">
       {/* Header Section */}
       <div className="row mb-4">
-<<<<<<< HEAD
-        <div className="col">
-          <div className="d-flex justify-content-between align-items-center">
-            <div>
-              <h1 className="h2 fw-bold mb-2">Reports Database</h1>
-=======
         <div className="col-12">
           <div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
             <div className="mb-3 mb-md-0">
               <h1 className="h2 mb-1">Reports Database</h1>
->>>>>>> f113a045d96bf139bc02c9ede7d28ee5d1bafa28
               <p className="text-muted mb-0">Manage and access your business reports</p>
             </div>
             <div className="d-flex flex-wrap gap-2">
