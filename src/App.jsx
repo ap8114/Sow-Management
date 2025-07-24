@@ -26,6 +26,14 @@ import SolvencyRatios from "./Component/Financial-ratio/Solvencyratios/SolvencyR
 import EfficiencyRatios from "./Component/Financial-ratio/Efficiencyratios/EfficiencyRatios";
 import BalanceSheetPage from "./Component/Financial-ratio/Balancesheet/BalanceSheetPage";
 import CustomMetricsPage from "./Component/Financial-ratio/Customfinancialmetrics/CustomMetricsPage";
+import CompanyKPI from "./Component/Kpi-tracking/CompanyKPI/CompanyKPI";
+import IndividualKPI from "./Component/Kpi-tracking/IndividualKPI/IndividualKPI";
+import LeadsPage from "./Component/Crm/Leads & Prospects/LeadsPage";
+import CustomerPipeline from "./Component/Crm/Customer Pipeline/CustomerPipeline";
+import CRMReports from "./Component/Crm/CRM Reports/CRMReports";
+import SalesForecastingPage from "./Component/Crm/Sales Forecasting/SalesForecastingPage";
+import ContactDatabasePage from "./Component/Crm/Contact & Company Database/ContactDatabasePage";
+import Followuptasks from "./Component/Crm/Follow-ups & Tasks/Followuptasks";
 
 
 function App() {
@@ -84,16 +92,26 @@ function App() {
                 <Route path="kpi/performance" element={<Performancekpi />} />
                 <Route path="kpi/trends" element={<Trends />} />
                 <Route path="kpi/alerts" element={<Alerts />} />
+                <Route path="kpi/companykpi" element={<CompanyKPI />} />
+                <Route path="kpi/individualkpi" element={<IndividualKPI />} />
 
                 {/* Financial Ratio */}
-                 <Route path="finance/overview" element={<FinancialOverview />} />
-                 <Route path="finance/ratio" element={<RatioAnalysis />} />
-                 <Route path="finance/liquidity" element={<LiquidityRatios />} />
-                 <Route path="finance/profitability" element={<ProfitabilityRatios />} />
-                 <Route path="finance/solvency" element={<SolvencyRatios />} />
-                 <Route path="finance/efficiency" element={<EfficiencyRatios />} />
-                 <Route path="finance/balance" element={<BalanceSheetPage />} />
-                 <Route path="finance/custom" element={<CustomMetricsPage />} />
+                <Route path="finance/overview" element={<FinancialOverview />} />
+                <Route path="finance/ratio" element={<RatioAnalysis />} />
+                <Route path="finance/liquidity" element={<LiquidityRatios />} />
+                <Route path="finance/profitability" element={<ProfitabilityRatios />} />
+                <Route path="finance/solvency" element={<SolvencyRatios />} />
+                <Route path="finance/efficiency" element={<EfficiencyRatios />} />
+                <Route path="finance/balance" element={<BalanceSheetPage />} />
+                <Route path="finance/custom" element={<CustomMetricsPage />} />
+
+                {/* CRM */}
+                <Route path="/crm/leads" element={<LeadsPage />} />
+                <Route path="/crm/pipeline" element={<CustomerPipeline />} />
+                <Route path="/crm/database" element={<ContactDatabasePage />} />
+                <Route path="/crm/tasks" element={<Followuptasks />} />
+                <Route path="/crm/forecast" element={<SalesForecastingPage />} />
+                <Route path="/crm/reports" element={<CRMReports />} />
 
               </Routes>
             </div>
