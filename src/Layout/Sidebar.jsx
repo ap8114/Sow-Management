@@ -52,6 +52,8 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
       subItems: [
         { label: "Define KPIs", path: "/kpi/define" },
         { label: "Team KPIs", path: "/kpi/team" },
+        { label: "Company KPIs", path: "/kpi/companykpi" },
+        { label: "Individual KPIs", path: "/kpi/individualkpi" },
         { label: "Performance Dashboards", path: "/kpi/performance" },
         { label: "KPI Trends & Analytics", path: "/kpi/trends" },
         { label: "Alerts / Threshold Management", path: "/kpi/alerts" },
