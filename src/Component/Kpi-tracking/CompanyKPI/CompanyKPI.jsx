@@ -14,7 +14,7 @@ const CompanyKPI = () => {
       change: 12.5,
       trend: 'up',
       target: '$900,000',
-      progress: 94
+      progress: 99
     },
     {
       id: 2,
