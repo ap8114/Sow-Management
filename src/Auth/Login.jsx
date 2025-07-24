@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+
 const Login = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/admin/staffmanagement"); // ✅ fixed redirect on submit
+    navigate("/admin/staffmanagement");
   };
 
   return (
@@ -36,24 +37,28 @@ const Login = () => {
                   <input type="email" className="form-control" required />
                 </div>
 
-                <div className="mb-3 position-relative">
+                {/* Updated Password Field */}
+                <div className="mb-3">
                   <label className="form-label">Password</label>
-                  <input
-                    type={showPassword ? "text" : "password"}
-                    className="form-control"
-                    required
-                  />
-                  <span
-                    className="position-absolute top-50 end-0 translate-middle-y me-3"
-                    style={{ cursor: "pointer" }}
-                    onClick={() => setShowPassword(!showPassword)}
-                  >
-                    {showPassword ? (
-                      <i className="bi bi-eye-slash-fill"></i>
-                    ) : (
-                      <i className="bi bi-eye-fill"></i>
-                    )}
-                  </span>
+                  <div className="position-relative">
+                    <input
+                      type={showPassword ? "text" : "password"}
+                      className="form-control pe-5"
+                      required
+                    />
+                    <span
+                      className="position-absolute top-50 translate-middle-y"
+                      style={{ right: "15px", cursor: "pointer" }}
+                      onClick={() => setShowPassword(!showPassword)}
+                    >
+                      {showPassword ? (
+                          <i className="bi bi-eye-fill"></i>
+                       
+                      ) : (
+                        <i className="bi bi-eye-slash-fill"></i>
+                      )}
+                    </span>
+                  </div>
                 </div>
 
                 <div className="mb-3 d-flex justify-content-between align-items-center">
@@ -64,12 +69,14 @@ const Login = () => {
                   <a href="#" className="text-decoration-none small">Forgot Password?</a>
                 </div>
 
-                <Link to="/okrs/companyokrs" className="text-decoration-none">
-                 <button type="submit" className="btn btn-warning w-100 py-2">
+                {/* Submit Button */}
+             <Link to="/okrs/companyokrs" className="text-decoration-none">
+               <button type="submit" className="btn btn-warning w-100 py-2">
                   Login
                 </button>
-                </Link>
-               
+             </Link>
+
+              
               </form>
             </div>
           </div>

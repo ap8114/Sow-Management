@@ -178,7 +178,7 @@ const CRMReports = () => {
                 <i className="fas fa-ellipsis-h"></i>
               </button>
             </div>
-            <div className="card-body">
+            <div className="card-body ">
               <div id="pipelineChart" style={{ height: '300px', width: '100%' }}></div>
             </div>
           </div>
