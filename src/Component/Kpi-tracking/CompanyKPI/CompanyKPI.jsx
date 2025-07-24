@@ -10,7 +10,7 @@ const CompanyKPI = () => {
     {
       id: 1,
       title: 'Total Revenue',
-      value: '$847,923',
+      value: '$847,927',
       change: 12.5,
       trend: 'up',
       target: '$900,000',
