@@ -1,32 +1,17 @@
 import React, { useState } from 'react';
-import NewReportModal from './NewReportModal'; // We'll create this next
+import NewReportModal from './NewReportModal';
 
-interface Report {
-  id: number;
-  name: string;
-  type: string;
-  date: string;
-  format: string;
-  tags: string[];
-}
-
-interface Filter {
-  type: string;
-  date: string;
-  format: string;
-}
-
-const ReportsPage: React.FC = () => {
+const ReportsPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [showNewReportModal, setShowNewReportModal] = useState(false);
-  const [selectedFilter, setSelectedFilter] = useState<Filter>({
+  const [selectedFilter, setSelectedFilter] = useState({
     type: 'all',
     date: 'all',
     format: 'all'
   });
   const [showFilters, setShowFilters] = useState(false);
 
-  const reports: Report[] = [
+  const reports = [
     { id: 1, name: 'Weekly Sales Report', type: 'Weekly', date: '2025-07-22', format: 'PDF', tags: ['Sales', 'Weekly'] },
     { id: 2, name: 'Monthly Revenue Analysis', type: 'Monthly', date: '2025-07-21', format: 'CSV', tags: ['Revenue', 'Monthly'] },
     { id: 3, name: 'Q2 Performance Review', type: 'Quarterly', date: '2025-07-20', format: 'XLS', tags: ['Performance', 'Quarterly'] },
@@ -35,7 +20,7 @@ const ReportsPage: React.FC = () => {
   ];
 
   return (
-    <div className="container-fluid py-4">
+    <div className="">
       <div className="row mb-4">
         <div className="col">
           <div className="d-flex justify-content-between align-items-center">
@@ -97,7 +82,7 @@ const ReportsPage: React.FC = () => {
                     <select
                       className="form-select"
                       value={selectedFilter.type}
-                      onChange={(e) => setSelectedFilter({...selectedFilter, type: e.target.value})}
+                      onChange={(e) => setSelectedFilter({ ...selectedFilter, type: e.target.value })}
                     >
                       <option value="all">All Types</option>
                       <option value="weekly">Weekly</option>
@@ -111,7 +96,7 @@ const ReportsPage: React.FC = () => {
                     <select
                       className="form-select"
                       value={selectedFilter.date}
-                      onChange={(e) => setSelectedFilter({...selectedFilter, date: e.target.value})}
+                      onChange={(e) => setSelectedFilter({ ...selectedFilter, date: e.target.value })}
                     >
                       <option value="all">All Time</option>
                       <option value="today">Today</option>
@@ -124,7 +109,7 @@ const ReportsPage: React.FC = () => {
                     <select
                       className="form-select"
                       value={selectedFilter.format}
-                      onChange={(e) => setSelectedFilter({...selectedFilter, format: e.target.value})}
+                      onChange={(e) => setSelectedFilter({ ...selectedFilter, format: e.target.value })}
                     >
                       <option value="all">All Formats</option>
                       <option value="pdf">PDF</option>
@@ -217,9 +202,9 @@ const ReportsPage: React.FC = () => {
         </div>
       </div>
 
-      <NewReportModal 
-        show={showNewReportModal} 
-        onClose={() => setShowNewReportModal(false)} 
+      <NewReportModal
+        show={showNewReportModal}
+        onClose={() => setShowNewReportModal(false)}
       />
     </div>
   );

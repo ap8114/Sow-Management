@@ -34,6 +34,8 @@ import CRMReports from "./Component/Crm/CRM Reports/CRMReports";
 import SalesForecastingPage from "./Component/Crm/Sales Forecasting/SalesForecastingPage";
 import ContactDatabasePage from "./Component/Crm/Contact & Company Database/ContactDatabasePage";
 import Followuptasks from "./Component/Crm/Follow-ups & Tasks/Followuptasks";
+import ReportsPage from "./Component/Reports/ReportsPage";
+import SettingsPage from "./Component/Settings/SettingsPage";
 
 
 function App() {
@@ -112,6 +114,12 @@ function App() {
                 <Route path="/crm/tasks" element={<Followuptasks />} />
                 <Route path="/crm/forecast" element={<SalesForecastingPage />} />
                 <Route path="/crm/reports" element={<CRMReports />} />
+
+                {/* Reports */}
+                <Route path="/reports" element={<ReportsPage />} />
+
+                   {/* Reports */}
+                <Route path="/settings" element={<SettingsPage />} />
 
               </Routes>
             </div>
