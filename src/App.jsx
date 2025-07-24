@@ -1,12 +1,14 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import { useState, useEffect } from "react";
-import Company from "./Component/Okrs/Company";
+
 import Navbar from "./Layout/Navbar";
 import Login from "./Auth/Login";
 import Signup from "./Auth/Signup";
 import ForgotPassword from "./Auth/ForgotPassword";
 import Sidebar from "./Layout/Sidebar";
+import DepartmentOKRs from "./Component/Okrs-management/Departement/DepartmentOKRs";
+import Companyokrs from "./Component/Okrs-management/Company/Companyokrs";
 
 
 function App() {
@@ -52,7 +54,8 @@ function App() {
               }`}
             >
               <Routes>
-                <Route path="/companyokr" element={<Company />} />
+                <Route path="okrs/companyokrs" element={<Companyokrs />} />
+                <Route path="okrs/departmentokrs" element={<DepartmentOKRs />} />
               </Routes>
             </div>
           </div>
