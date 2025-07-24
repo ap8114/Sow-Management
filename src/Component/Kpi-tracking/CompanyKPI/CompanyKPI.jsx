@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import * as echarts from 'echarts';
-
-
+import KPIModal from './KPIModal';
+import { Button } from 'react-bootstrap';
 
 const CompanyKPI = () => {
   const [selectedPeriod, setSelectedPeriod] = useState('This Month');
+  const [showModal, setShowModal] = useState(false);
   const [kpiData] = useState([
     {
       id: 1,
@@ -47,100 +48,80 @@ const CompanyKPI = () => {
   const periods = ['Today', 'This Week', 'This Month', 'This Quarter', 'This Year'];
 
   useEffect(() => {
-    // Revenue Chart
-    const revenueChart = echarts.init(document.getElementById('revenueChart'));
-    const revenueOption = {
-      animation: false,
-      tooltip: {
-        trigger: 'axis'
-      },
-      grid: {
-        left: '3%',
-        right: '4%',
-        bottom: '3%',
-        containLabel: true
-      },
-      xAxis: {
-        type: 'category',
-        data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']
-      },
-      yAxis: {
-        type: 'value'
-      },
-      series: [{
-        name: 'Revenue',
-        data: [650000, 720000, 780000, 740000, 820000, 850000, 847923],
-        type: 'line',
-        smooth: true,
-        lineStyle: {
-          color: '#3B82F6'
+    // Initialize charts
+    const initCharts = () => {
+      // Revenue Chart
+      const revenueChart = echarts.init(document.getElementById('revenueChart'));
+      revenueChart.setOption({
+        animation: false,
+        tooltip: { trigger: 'axis' },
+        grid: { left: '3%', right: '4%', bottom: '3%', containLabel: true },
+        xAxis: {
+          type: 'category',
+          data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']
         },
-        areaStyle: {
-          color: {
-            type: 'linear',
-            x: 0,
-            y: 0,
-            x2: 0,
-            y2: 1,
-            colorStops: [{
-              offset: 0,
-              color: 'rgba(59, 130, 246, 0.2)'
-            }, {
-              offset: 1,
-              color: 'rgba(59, 130, 246, 0.01)'
-            }]
+        yAxis: { type: 'value' },
+        series: [{
+          name: 'Revenue',
+          data: [650000, 720000, 780000, 740000, 820000, 850000, 847923],
+          type: 'line',
+          smooth: true,
+          lineStyle: { color: '#3B82F6' },
+          areaStyle: {
+            color: {
+              type: 'linear',
+              x: 0, y: 0, x2: 0, y2: 1,
+              colorStops: [
+                { offset: 0, color: 'rgba(59, 130, 246, 0.2)' },
+                { offset: 1, color: 'rgba(59, 130, 246, 0.01)' }
+              ]
+            }
           }
-        }
-      }]
-    };
-    revenueChart.setOption(revenueOption);
+        }]
+      });
 
-    // Customer Growth Chart
-    const customerChart = echarts.init(document.getElementById('customerChart'));
-    const customerOption = {
-      animation: false,
-      tooltip: {
-        trigger: 'axis'
-      },
-      grid: {
-        left: '3%',
-        right: '4%',
-        bottom: '3%',
-        containLabel: true
-      },
-      xAxis: {
-        type: 'category',
-        data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']
-      },
-      yAxis: {
-        type: 'value'
-      },
-      series: [{
-        name: 'Customers',
-        data: [1100, 1250, 1320, 1390, 1420, 1460, 1482],
-        type: 'bar',
-        barWidth: '60%',
-        itemStyle: {
-          color: '#10B981'
-        }
-      }]
-    };
-    customerChart.setOption(customerOption);
+      // Customer Growth Chart
+      const customerChart = echarts.init(document.getElementById('customerChart'));
+      customerChart.setOption({
+        animation: false,
+        tooltip: { trigger: 'axis' },
+        grid: { left: '3%', right: '4%', bottom: '3%', containLabel: true },
+        xAxis: {
+          type: 'category',
+          data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']
+        },
+        yAxis: { type: 'value' },
+        series: [{
+          name: 'Customers',
+          data: [1100, 1250, 1320, 1390, 1420, 1460, 1482],
+          type: 'bar',
+          barWidth: '60%',
+          itemStyle: { color: '#10B981' }
+        }]
+      });
 
-    // Cleanup
-    return () => {
-      revenueChart.dispose();
-      customerChart.dispose();
+      return () => {
+        revenueChart.dispose();
+        customerChart.dispose();
+      };
     };
+
+    // Add slight delay to ensure DOM is ready
+    const timer = setTimeout(initCharts, 100);
+    return () => clearTimeout(timer);
   }, []);
+
+  const handleShowModal = () => setShowModal(true);
+  const handleCloseModal = () => setShowModal(false);
 
   return (
     <div className="container-fluid py-4 bg-light">
       {/* Header Section */}
       <div className="row mb-4">
         <div className="col-md-6">
-          <h1 className="h2 mb-2">Company KPI</h1>
-          <p className="text-muted">
+          <h1 className="h2 mb-2">Company KPI Dashboard</h1>
+          <p className="text-muted mb-0">
+            <i className="fas fa-clock me-2"></i>
             Last updated: July 23, 2025 at 09:30 AM
           </p>
         </div>
@@ -149,32 +130,42 @@ const CompanyKPI = () => {
             <select
               value={selectedPeriod}
               onChange={(e) => setSelectedPeriod(e.target.value)}
-              className="form-select"
+              className="form-select form-select-sm"
             >
               {periods.map((period) => (
                 <option key={period} value={period}>{period}</option>
               ))}
             </select>
           </div>
-          <button className="btn btn-primary">
+          <Button 
+            variant="outline-info" 
+            onClick={handleShowModal}
+            className="me-2"
+          >
+            <i className="fas fa-chart-line me-2"></i>
+            Detailed Analysis
+          </Button>
+          <Button variant="primary">
             <i className="fas fa-download me-2"></i>
-            Export Report
-          </button>
+            Export
+          </Button>
         </div>
       </div>
 
       {/* KPI Cards Grid */}
-      <div className="row mb-4">
+      <div className="row mb-4 g-4">
         {kpiData.map((kpi) => (
-          <div key={kpi.id} className="col-md-6 col-lg-3 mb-4">
-            <div className="card h-100">
+          <div key={kpi.id} className="col-md-6 col-lg-3">
+            <div className="card h-100 border-0 shadow-sm">
               <div className="card-body">
                 <div className="d-flex justify-content-between mb-3">
                   <div>
-                    <h5 className="text-muted small mb-1">{kpi.title}</h5>
+                    <h6 className="text-muted text-uppercase small mb-1">{kpi.title}</h6>
                     <h3 className="mb-0">{kpi.value}</h3>
                   </div>
-                  <span className={`badge ${kpi.trend === 'up' ? 'bg-success bg-opacity-10 text-success' : 'bg-danger bg-opacity-10 text-danger'}`}>
+                  <span className={`badge ${kpi.trend === 'up' ? 
+                    'bg-success bg-opacity-10 text-success' : 
+                    'bg-danger bg-opacity-10 text-danger'}`}>
                     <i className={`fas fa-arrow-${kpi.trend} me-1`}></i>
                     {Math.abs(kpi.change)}%
                   </span>
@@ -186,12 +177,8 @@ const CompanyKPI = () => {
                   </div>
                   <div className="progress" style={{ height: '6px' }}>
                     <div
-                      className="progress-bar"
-                      role="progressbar"
+                      className={`progress-bar ${kpi.progress > 90 ? 'bg-success' : kpi.progress > 70 ? 'bg-primary' : 'bg-warning'}`}
                       style={{ width: `${kpi.progress}%` }}
-                      aria-valuenow={kpi.progress}
-                      aria-valuemin={0}
-                      aria-valuemax={100}
                     ></div>
                   </div>
                 </div>
@@ -202,29 +189,39 @@ const CompanyKPI = () => {
       </div>
 
       {/* Charts Section */}
-      <div className="row mb-4">
-        <div className="col-lg-6 mb-4">
-          <div className="card h-100">
+      <div className="row g-4 mb-4">
+        <div className="col-lg-6">
+          <div className="card h-100 border-0 shadow-sm">
             <div className="card-body">
-              <h5 className="card-title">Revenue Trend</h5>
-              <div id="revenueChart" style={{ height: '320px' }}></div>
+              <div className="d-flex justify-content-between align-items-center mb-3">
+                <h5 className="card-title mb-0">Revenue Trend</h5>
+                <span className="badge bg-primary bg-opacity-10 text-primary">
+                  {selectedPeriod}
+                </span>
+              </div>
+              <div id="revenueChart" style={{ height: '300px' }}></div>
             </div>
           </div>
         </div>
-        <div className="col-lg-6 mb-4">
-          <div className="card h-100">
+        <div className="col-lg-6">
+          <div className="card h-100 border-0 shadow-sm">
             <div className="card-body">
-              <h5 className="card-title">Customer Growth</h5>
-              <div id="customerChart" style={{ height: '320px' }}></div>
+              <div className="d-flex justify-content-between align-items-center mb-3">
+                <h5 className="card-title mb-0">Customer Growth</h5>
+                <span className="badge bg-success bg-opacity-10 text-success">
+                  {selectedPeriod}
+                </span>
+              </div>
+              <div id="customerChart" style={{ height: '300px' }}></div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Quick Stats */}
-      <div className="row">
-        <div className="col-md-4 mb-4">
-          <div className="card">
+      <div className="row g-4">
+        <div className="col-md-4">
+          <div className="card border-0 shadow-sm">
             <div className="card-body">
               <div className="d-flex align-items-center">
                 <div className="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
@@ -238,8 +235,8 @@ const CompanyKPI = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-4 mb-4">
-          <div className="card">
+        <div className="col-md-4">
+          <div className="card border-0 shadow-sm">
             <div className="card-body">
               <div className="d-flex align-items-center">
                 <div className="bg-success bg-opacity-10 p-3 rounded-circle me-3">
@@ -253,8 +250,8 @@ const CompanyKPI = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-4 mb-4">
-          <div className="card">
+        <div className="col-md-4">
+          <div className="card border-0 shadow-sm">
             <div className="card-body">
               <div className="d-flex align-items-center">
                 <div className="bg-purple bg-opacity-10 p-3 rounded-circle me-3">
@@ -270,9 +267,8 @@ const CompanyKPI = () => {
         </div>
       </div>
 
-           {/* Render the modal */}
+      {/* KPI Modal */}
       <KPIModal show={showModal} handleClose={handleCloseModal} />
-    </div>
     </div>
   );
 };
