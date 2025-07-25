@@ -5,17 +5,10 @@ const DepartmentOKRs = () => {
 
   return (
     <div className="">
-<<<<<<< HEAD
-      {/* Header Section */}
-      <div className="mb-3 mb-md-4">
-        <h1 className="h2 fw-bold mb-1 mb-md-2">Department OKRs</h1>
-        <p className="text-muted mb-0">Track and manage department-specific objectives and key results</p>
-=======
       {/* Header */}
       <div className="">
         <h3 className="fw-bold mb-1 mb-md-2">Department OKRs</h3>
         <p className="text-muted small mb-0">Track and manage department-specific objectives and key results</p>
->>>>>>> 9fed4a624c7cf273e001f7cfcc4871f0c49304d7
       </div>
 
       {/* Filters */}

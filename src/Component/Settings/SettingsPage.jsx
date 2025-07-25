@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import AddUserModal from './AddUserModal';
+import UserManagement from './UserManagement';
 
 const SettingsPage = () => {
   // State for various settings
@@ -142,88 +143,7 @@ const SettingsPage = () => {
         <div className="col-12">
           {/* User Management Tab */}
           {activeTab === 'user' && (
-            <div className="card">
-              <div className="card-body">
-                <div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-3 mb-md-4 gap-2">
-                  <div>
-                    <h2 className="h5 h-md-4 mb-1">User Management</h2>
-                    <p className="text-muted small mb-0">Manage user access and roles</p>
-                  </div>
-                  <button 
-                  onClick={() => setIsModalOpen(true)}
-                  className="btn btn-primary btn-sm py-2 px-3  w-md-auto"
-                >
-                  <i className="fas fa-plus me-1 d-md-none"></i>
-                  <span>Add User</span>
-                </button>
-                </div>
-
-                <div className="table-responsive">
-                  <table className="table table-sm table-hover">
-                    <thead className="table-light">
-                      <tr>
-                        <th className="ps-2">Name</th>
-                        <th>Email</th>
-                        <th>Role</th>
-                        <th>Status</th>
-                        <th className="text-end pe-2">Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {users.map(user => (
-                        <tr key={user.id}>
-                          <td className="ps-2">{user.name}</td>
-                          <td className="text-truncate" style={{maxWidth: '150px'}}>{user.email}</td>
-                          <td>
-                            <select 
-                              className="form-select form-select-sm"
-                              value={user.role}
-                              onChange={(e) => handleRoleChange(user.id, e.target.value)}
-                            >
-                              <option value="Admin">Admin</option>
-                              <option value="Manager">Manager</option>
-                              <option value="User">User</option>
-                            </select>
-                          </td>
-                          <td>
-                            <div className="form-check form-switch d-inline-block">
-                              <input 
-                                type="checkbox" 
-                                className="form-check-input" 
-                                checked={user.status}
-                                onChange={() => handleStatusToggle(user.id)}
-                              />
-                            </div>
-                          </td>
-                          <td className="text-end pe-2">
-                            <div className="d-flex justify-content-end gap-2">
-                              <button 
-                                className="btn btn-sm btn-outline-primary"
-                                onClick={() => handleEditUser(user)}
-                                data-bs-toggle="tooltip" 
-                                data-bs-placement="top" 
-                                title="Edit User"
-                              >
-                                <i className="fas fa-edit"></i>
-                              </button>
-                              <button 
-                                className="btn btn-sm btn-outline-danger"
-                                onClick={() => handleDeleteUser(user.id)}
-                                data-bs-toggle="tooltip" 
-                                data-bs-placement="top" 
-                                title="Delete User"
-                              >
-                                <i className="fas fa-trash-alt"></i>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
+            <UserManagement/>
           )}
 
           {/* Notification Settings Tab */}
@@ -354,78 +274,6 @@ const SettingsPage = () => {
           )}
         </div>
       </div>
-
-      {/* Add/Edit User Modal */}
-      {/* {isModalOpen && (
-        <div className="modal fade show" style={{display: 'block', backgroundColor: 'rgba(0,0,0,0.5)'}}>
-          <div className="modal-dialog modal-dialog-centered">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title">{editingUser ? 'Edit User' : 'Add New User'}</h5>
-                <button 
-                  type="button" 
-                  className="btn-close" 
-                  onClick={() => {
-                    setIsModalOpen(false);
-                    setEditingUser(null);
-                  }}
-                ></button>
-              </div>
-              <form onSubmit={handleSubmit}>
-                <div className="modal-body">
-                  <div className="mb-3">
-                    <label className="form-label">Name</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
-                      required
-                    />
-                  </div>
-                  <div className="mb-3">
-                    <label className="form-label">Email</label>
-                    <input
-                      type="email"
-                      className="form-control"
-                      value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
-                      required
-                    />
-                  </div>
-                  <div className="mb-3">
-                    <label className="form-label">Role</label>
-                    <select
-                      className="form-select"
-                      value={formData.role}
-                      onChange={(e) => setFormData({...formData, role: e.target.value})}
-                    >
-                      <option value="Admin">Admin</option>
-                      <option value="Manager">Manager</option>
-                      <option value="User">User</option>
-                    </select>
-                  </div>
-                </div>
-                <div className="modal-footer">
-                  <button 
-                    type="button" 
-                    className="btn btn-secondary" 
-                    onClick={() => {
-                      setIsModalOpen(false);
-                      setEditingUser(null);
-                    }}
-                  >
-                    Cancel
-                  </button>
-                  <button type="submit" className="btn btn-primary">
-                    {editingUser ? 'Update User' : 'Add User'}
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      )} */}
 
       <AddUserModal
         isOpen={isModalOpen}
