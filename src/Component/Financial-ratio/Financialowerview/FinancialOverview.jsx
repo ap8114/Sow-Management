@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const FinancialOverview = () => {
   return (
@@ -9,39 +9,40 @@ const FinancialOverview = () => {
           <div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4">
             <div className="mb-3 mb-md-0">
               <h1 className="h2 fw-bold mb-2">Financial Overview</h1>
-              <p className="text-muted">Key financial metrics and performance indicators</p>
+              <p className="text-muted">
+                Key financial metrics and performance indicators
+              </p>
             </div>
-          <div className="row mb-4">
-  {/* Left Buttons Section */}
-  <div className="col-12 col-md-8 mb-3 mb-md-0">
-    <div className="d-flex flex-column flex-sm-row flex-wrap gap-2">
-      <button
-        onClick={() => setIsModalOpen(true)}
-        className="btn btn-primary d-flex align-items-center gap-2"
-      >
-        <i className="fas fa-plus"></i>
-        <span>Add New OKR</span>
-      </button>
-      <button className="btn btn-outline-secondary d-flex align-items-center gap-2">
-        <i className="fas fa-filter"></i>
-        <span>Filter</span>
-      </button>
-    </div>
-  </div>
+            <div className="row mb-4">
+              {/* Left Buttons Section */}
+              <div className="col-12 col-md-5  mb-md-0">
+                <div className="d-flex flex-column flex-sm-row flex-wrap gap-2">
+                  {/* <button
+                        onClick={() => setIsModalOpen(true)}
+                         className="btn btn-primary d-flex align-items-center gap-2"
+                          >
+                         <i className="fas fa-plus"></i>
+                        <span>Add New OKR</span>
+                        </button> */}
+                  <button className="btn btn-outline-secondary d-flex align-items-center gap-2">
+                    <i className="fas fa-filter"></i>
+                    <span>Filter</span>
+                  </button>
+                </div>
+              </div>
 
-  {/* Right Select Dropdown Section */}
-  <div className="col-12 col-md-4">
-    <div className="d-flex justify-content-md-end">
-      <select className="form-select w-100 w-md-auto">
-        <option>Q3 2025</option>
-        <option>Q2 2025</option>
-        <option>Q1 2025</option>
-        <option>Q4 2024</option>
-      </select>
-    </div>
-  </div>
-</div>
-
+              {/* Right Select Dropdown Section */}
+              <div className="col-12 col-md-4">
+                <div className="d-flex justify-content-md-end" style={{width: '120px'}}>
+                  <select className="form-select w-100 w-md-auto">
+                    <option>Q3 2025</option>
+                    <option>Q2 2025</option>
+                    <option>Q1 2025</option>
+                    <option>Q4 2024</option>
+                  </select>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Key Metrics Cards */}
@@ -51,7 +52,9 @@ const FinancialOverview = () => {
               <div className="card bg-primary bg-opacity-10 border-primary border-opacity-25 h-100">
                 <div className="card-body">
                   <div className="d-flex justify-content-between align-items-center mb-3">
-                    <h3 className="h6 text-primary font-weight-medium mb-0">Revenue</h3>
+                    <h3 className="h6 text-primary font-weight-medium mb-0">
+                      Revenue
+                    </h3>
                     <i className="fas fa-chart-line text-primary"></i>
                   </div>
                   <div className="h3 font-weight-bold text-primary">$2.4M</div>
@@ -69,7 +72,9 @@ const FinancialOverview = () => {
               <div className="card bg-success bg-opacity-10 border-success border-opacity-25 h-100">
                 <div className="card-body">
                   <div className="d-flex justify-content-between align-items-center mb-3">
-                    <h3 className="h6 text-success font-weight-medium mb-0">Profit Margin</h3>
+                    <h3 className="h6 text-success font-weight-medium mb-0">
+                      Profit Margin
+                    </h3>
                     <i className="fas fa-percentage text-success"></i>
                   </div>
                   <div className="h3 font-weight-bold text-success">32.8%</div>
@@ -87,7 +92,9 @@ const FinancialOverview = () => {
               <div className="card bg-purple bg-opacity-10 border-purple border-opacity-25 h-100">
                 <div className="card-body">
                   <div className="d-flex justify-content-between align-items-center mb-3">
-                    <h3 className="h6 text-purple font-weight-medium mb-0">Operating Costs</h3>
+                    <h3 className="h6 text-purple font-weight-medium mb-0">
+                      Operating Costs
+                    </h3>
                     <i className="fas fa-wallet text-purple"></i>
                   </div>
                   <div className="h3 font-weight-bold text-purple">$820K</div>
@@ -105,7 +112,9 @@ const FinancialOverview = () => {
               <div className="card bg-warning bg-opacity-10 border-warning border-opacity-25 h-100">
                 <div className="card-body">
                   <div className="d-flex justify-content-between align-items-center mb-3">
-                    <h3 className="h6 text-warning font-weight-medium mb-0">Cash Flow</h3>
+                    <h3 className="h6 text-warning font-weight-medium mb-0">
+                      Cash Flow
+                    </h3>
                     <i className="fas fa-money-bill-wave text-warning"></i>
                   </div>
                   <div className="h3 font-weight-bold text-warning">$1.2M</div>
@@ -123,7 +132,9 @@ const FinancialOverview = () => {
           <div className="card">
             <div className="card-header d-flex justify-content-between align-items-center">
               <h3 className="h5 mb-0">Recent Transactions</h3>
-              <button className="btn btn-link text-primary p-0">View All</button>
+              <button className="btn btn-link text-primary p-0">
+                View All
+              </button>
             </div>
             <div className="list-group list-group-flush">
               {/* Transaction 1 */}
@@ -138,7 +149,9 @@ const FinancialOverview = () => {
                       <div className="small text-muted">July 21, 2025</div>
                     </div>
                   </div>
-                  <div className="text-success font-weight-medium">+$45,200</div>
+                  <div className="text-success font-weight-medium">
+                    +$45,200
+                  </div>
                 </div>
               </div>
 
@@ -170,7 +183,9 @@ const FinancialOverview = () => {
                       <div className="small text-muted">July 19, 2025</div>
                     </div>
                   </div>
-                  <div className="text-success font-weight-medium">+$28,500</div>
+                  <div className="text-success font-weight-medium">
+                    +$28,500
+                  </div>
                 </div>
               </div>
             </div>
