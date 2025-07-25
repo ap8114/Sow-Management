@@ -10,6 +10,8 @@ const SettingsPage = () => {
     email: '',
     role: 'User'
   });
+   const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [smsNotifications, setSmsNotifications] = useState(false);
   const [pushNotifications, setPushNotifications] = useState(true);
   const dummyApiKey = 'sk_test_51NXXXXXXXXXXXXXXXXXXXXXXx';
@@ -27,7 +29,7 @@ const SettingsPage = () => {
       <div className="row">
         <div className="col-12">
           <div className="mb-4">
-            <h1 className="h2 fw-bold mb-2">Settings</h1>
+            <h1 className="h3 fw-bold mb-2">Settings</h1>
             <p className="text-muted mb-0">Manage and configure your application settings</p>
           </div>
         </div>
