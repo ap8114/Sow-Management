@@ -10,6 +10,8 @@ const SettingsPage = () => {
     email: '',
     role: 'User'
   });
+   const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [smsNotifications, setSmsNotifications] = useState(false);
   const [pushNotifications, setPushNotifications] = useState(true);
   const dummyApiKey = 'sk_test_51NXXXXXXXXXXXXXXXXXXXXXXx';
