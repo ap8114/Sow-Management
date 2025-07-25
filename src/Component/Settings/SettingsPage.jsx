@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import AddUserModal from './AddUserModal';
 
 const SettingsPage = () => {
   // State for various settings
@@ -10,8 +11,7 @@ const SettingsPage = () => {
     email: '',
     role: 'User'
   });
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+ 
   const [smsNotifications, setSmsNotifications] = useState(false);
   const [pushNotifications, setPushNotifications] = useState(true);
   const [activeTab, setActiveTab] = useState('user');
@@ -150,15 +150,12 @@ const SettingsPage = () => {
                     <p className="text-muted small mb-0">Manage user access and roles</p>
                   </div>
                   <button 
-                    onClick={() => {
-                      setEditingUser(null);
-                      setIsModalOpen(true);
-                    }}
-                    className="btn btn-primary btn-sm py-2 px-3 w-md-auto"
-                  >
-                    <i className="fas fa-plus me-1 d-md-none"></i>
-                    <span>Add User</span>
-                  </button>
+                  onClick={() => setIsModalOpen(true)}
+                  className="btn btn-primary btn-sm py-2 px-3  w-md-auto"
+                >
+                  <i className="fas fa-plus me-1 d-md-none"></i>
+                  <span>Add User</span>
+                </button>
                 </div>
 
                 <div className="table-responsive">
@@ -359,7 +356,7 @@ const SettingsPage = () => {
       </div>
 
       {/* Add/Edit User Modal */}
-      {isModalOpen && (
+      {/* {isModalOpen && (
         <div className="modal fade show" style={{display: 'block', backgroundColor: 'rgba(0,0,0,0.5)'}}>
           <div className="modal-dialog modal-dialog-centered">
             <div className="modal-content">
@@ -459,7 +456,16 @@ const SettingsPage = () => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
+
+      <AddUserModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        formData={formData}
+        setFormData={setFormData}
+        onSubmit={handleSubmit}
+      />
+    
     </div>
   );
 };

@@ -31,7 +31,7 @@ const insightsData = [
 
 const Trends = () => {
   return (
-    <div className="container-fluid py-4">
+    <div className="">
       {/* Header Section */}
       <div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4">
         <div className="mb-3 mb-md-0">
