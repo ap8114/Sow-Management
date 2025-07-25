@@ -34,7 +34,7 @@ const Profile = () => {
 
   return (
     <div className="">
-      <h2 className="mb-4">User Profile</h2>
+      <h2 className="h2 fw-bold mb-4 mb-md">User Profile</h2>
 
       {/* Profile Info */}
       <form onSubmit={handleProfileUpdate} className="mb-5">
