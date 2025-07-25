@@ -35,7 +35,7 @@ const Trends = () => {
       {/* Header Section */}
       <div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4">
         <div className="mb-3 mb-md-0">
-          <h1 className="h3 fw-bold mb-2">Trends & Analysis</h1>
+          <h3 className=" fw-bold mb-2">Trends & Analysis</h3>
           <p className="text-muted mb-0">Monitor key performance trends and insights</p>
         </div>
         <div className="d-flex gap-2">

@@ -11,7 +11,7 @@ const Individual = () => {
         <main className="col-12">
           {/* Header Section */}
           <div className="mb-3">
-            <h1 className="h4 fw-bold mb-1">Individual OKRs</h1>
+            <h3 className=" fw-bold mb-1">Individual OKRs</h3>
             <p className="text-muted small">Track and manage personal objectives and key results</p>
           </div>
 

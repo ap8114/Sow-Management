@@ -4,15 +4,15 @@ const DepartmentOKRs = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className="container-fluid ">
+    <div className="">
       {/* Header */}
-      <div className="mb-3 ">
-        <h4 className="fw-bold mb-1 mb-md-2">Department OKRs</h4>
+      <div className="">
+        <h3 className="fw-bold mb-1 mb-md-2">Department OKRs</h3>
         <p className="text-muted small mb-0">Track and manage department-specific objectives and key results</p>
       </div>
 
       {/* Filters */}
-      <div className="row align-items-center mb-3  g-2">
+      <div className="row align-items-center mb-3 mb-md-4 g-2">
         <div className="row g-3 align-items-stretch">
           <div className="col-12 col-md-6">
             <div className="d-flex flex-column flex-sm-row align-items-stretch align-items-sm-center gap-2">
