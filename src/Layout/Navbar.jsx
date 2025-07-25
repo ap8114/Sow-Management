@@ -21,21 +21,23 @@ const Navbar = ({ toggleSidebar }) => {
   return (
     <nav className="navbar navbar-expand px-3 py-2  shadow-sm d-flex justify-content-between align-items-center fixed-top " >
       {/* Sidebar Toggle + Logo */}
-      <div className="d-flex align-items-center gap-3">
-        {/* Toggle Button - Always visible */}
-        <button
-          className="btn btn-outline-secondary text-white p-3"
-          onClick={toggleSidebar}
-        >
-          <FaBars />
-        </button>
-        {/* Logo */}
+      <div className="d-flex align-items-center gap-4">
+
+          {/* Logo */}
         <img
           src="https://i.ibb.co/k2pNKGWG/sow-logo-sow-letter-sow-letter-logo-design-initials-sow-logo-linked-with-circle-uppercase-monogram-l.png"
           alt="Logo"
           className="navbar-logo img-fluid"
           style={{height:"50px" , width: "70px"}}
           />
+        {/* Toggle Button - Always visible */}
+        <button
+          className="btn  text-white p-3"
+          onClick={toggleSidebar}
+        >
+          <FaBars />
+        </button>
+      
       </div>
 
       {/* Search */}
