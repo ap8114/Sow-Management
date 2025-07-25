@@ -19,7 +19,7 @@ const Definekpi = () => {
            <div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 mb-4">
   {/* Text Block */}
   <div>
-    <h1 className="h2 fw-bold mb-2 mb-md-1">Define KPIs</h1>
+    <h1 className="h3 fw-bold mb-2 mb-md-1">Define KPIs</h1>
     <p className="text-muted mb-0">Create and manage your key performance indicators</p>
   </div>
 
