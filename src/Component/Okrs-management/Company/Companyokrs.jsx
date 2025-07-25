@@ -10,7 +10,7 @@ const Companyokrs = () => {
         <div className="">
           {/* Header Section */}
           <div className="mb-4">
-            <h4 className="fw-bold mb-1">Company OKRs</h4>
+            <h3 className="fw-bold mb-1">Company OKRs</h3>
             <p className="text-muted small">Set and track company-wide objectives and key results</p>
           </div>
 

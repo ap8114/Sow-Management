@@ -74,7 +74,7 @@ const IndividualKPI = () => {
       {/* Header Section */}
     <div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4 gap-3">
   <div>
-    <h1 className="h3 mb-1">Individual KPIs</h1>
+    <h3 className=" mb-1">Individual KPIs</h3>
     <p className="text-muted mb-0">Track and manage personal objectives and key results</p>
   </div>
   <div className="ms-md-auto d-flex flex-column flex-sm-row gap-2">

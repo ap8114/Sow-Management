@@ -137,7 +137,7 @@ const Alignment = () => {
   ];
 
   return (
-    <div className="container-fluid px-3 px-md-4 py-3">
+    <div className="">
       {/* Main Content */}
       <div className="flex-grow-1 d-flex flex-column">
         {/* Main Content Area */}
@@ -145,7 +145,7 @@ const Alignment = () => {
           <div className="">
             {/* Header Section */}
             <div className="mb-3 mb-md-4">
-              <h2 className="h5 fw-bold mb-1">Alignment & Dependencies</h2>
+              <h3 className=" fw-bold mb-1">Alignment & Dependencies</h3>
               <p className="text-muted small mb-0">Track dependencies and alignment between teams and objectives</p>
             </div>
             
