@@ -369,7 +369,7 @@ const SettingsPage = () => {
                   type="button" 
                   className="btn-close" 
                   onClick={() => {
-                    setIsModalOpen(false);
+                    setIsModalOpen(false);  
                     setEditingUser(null);
                   }}
                 ></button>
@@ -408,6 +408,37 @@ const SettingsPage = () => {
                       <option value="User">User</option>
                     </select>
                   </div>
+                    <div className="form-group mb-3 position-relative">
+                <label>Password</label>
+                <input
+                  type={showPassword ? 'text' : 'password'}
+                  required
+                  value={formData.password}
+                  onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                  className="form-control pe-4"
+                />
+                <i
+                  className={`bi ${showPassword ? 'bi-eye-slash' : 'bi-eye'} position-absolute top-50 end-0 translate-middle-y me-2`}
+                  style={{ cursor: 'pointer', marginTop:"11px" }}
+                  onClick={() => setShowPassword(!showPassword)}
+                ></i>
+              </div>
+
+              <div className="form-group mb-3 position-relative">
+                <label>Confirm Password</label>
+                <input
+                  type={showConfirmPassword ? 'text' : 'password'}
+                  required
+                  value={formData.confirmPassword}
+                  onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
+                  className="form-control pe-4"
+                />
+                <i
+                  className={`bi ${showConfirmPassword ? 'bi-eye-slash' : 'bi-eye'} position-absolute top-50 end-0 translate-middle-y me-2`}
+                  style={{ cursor: 'pointer', marginTop:"11px" }}
+                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                ></i>
+              </div>
                 </div>
                 <div className="modal-footer">
                   <button 
