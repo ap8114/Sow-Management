@@ -253,26 +253,25 @@ const ReportsPage = () => {
           </div>
         </div>
       </div>
-
-      <div className="row mt-4">
-        <div className="col">
-          <div className="d-flex justify-content-between align-items-center">
-            <div className="text-muted">
-              Showing {filteredReports.length} of {reports.length} reports
-            </div>
-            <div className="d-flex gap-2">
-              <button className="btn btn-outline-secondary">
-                <i className="fas fa-chevron-left me-1"></i>
-                Previous
-              </button>
-              <button className="btn btn-outline-secondary">
-                Next
-                <i className="fas fa-chevron-right ms-1"></i>
-              </button>
-            </div>
-          </div>
-        </div>
+<div className="row mt-4">
+  <div className="col-12">
+    <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <div className="text-muted text-center text-md-start">
+        Showing {filteredReports.length} of {reports.length} reports
       </div>
+      <div className="d-flex gap-2 flex-wrap justify-content-center">
+        <button className="btn btn-outline-secondary">
+          <i className="fas fa-chevron-left me-1"></i>
+          <span className="d-none d-sm-inline">Previous</span>
+        </button>
+        <button className="btn btn-outline-secondary">
+          <span className="d-none d-sm-inline">Next</span>
+          <i className="fas fa-chevron-right ms-1"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
       {/* New Standard Report Modal */}
       <NewReportModal

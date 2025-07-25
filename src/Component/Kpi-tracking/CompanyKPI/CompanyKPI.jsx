@@ -125,66 +125,83 @@ const CompanyKPI = () => {
             Last updated: July 23, 2025 at 09:30 AM
           </p>
         </div>
-        <div className="col-md-6 d-flex justify-content-md-end align-items-center">
-          <div className="me-3">
-            <select
-              value={selectedPeriod}
-              onChange={(e) => setSelectedPeriod(e.target.value)}
-              className="form-select form-select-sm"
-            >
-              {periods.map((period) => (
-                <option key={period} value={period}>{period}</option>
-              ))}
-            </select>
-          </div>
-          <Button
-            variant="outline-info"
-            onClick={handleShowModal}
-            className="me-2"
-          >
-            <i className="fas fa-chart-line me-2"></i>
-            Detailed Analysis
-          </Button>
-          <Button variant="primary">
-            <i className="fas fa-download me-2"></i>
-            Export
-          </Button>
-        </div>
+       <div className="col-12 col-md-6">
+  <div className="d-flex flex-column flex-sm-row justify-content-end align-items-center gap-2 mt-4 ">
+    <div className="w-100 w-sm-auto">
+      <select
+        value={selectedPeriod}
+        onChange={(e) => setSelectedPeriod(e.target.value)}
+        className="form-select form-select-sm"
+      >
+        {periods.map((period) => (
+          <option key={period} value={period}>{period}</option>
+        ))}
+      </select>
+    </div>
+    
+    <div className="d-flex flex-wrap justify-content-center justify-content-sm-end gap-2 w-100 w-sm-auto">
+      <Button
+        variant="outline-info"
+        onClick={handleShowModal}
+        size="sm"
+        className="text-nowrap"
+      >
+        <i className="fas fa-chart-line me-1 me-md-2"></i>
+        <span className="d-none d-sm-inline">Detailed Analysis</span>
+        <span className="d-inline d-sm-none">Analysis</span>
+      </Button>
+      
+      <Button 
+        variant="primary" 
+        size="sm"
+        className="text-nowrap"
+      >
+        <i className="fas fa-download me-1 me-md-2"></i>
+        Export
+      </Button>
+    </div>
+  </div>
+</div>
       </div>
 
       {/* KPI Cards Grid */}
       <div className="row mb-4 g-4">
         {kpiData.map((kpi) => (
-          <div key={kpi.id} className="col-md-6 col-lg-3">
-            <div className="card h-100 border-0 shadow-sm">
-              <div className="card-body">
-                <div className="d-flex justify-content-between mb-3">
-                  <div>
-                    <h6 className="text-muted text-uppercase small mb-1">{kpi.title}</h6>
-                    <h3 className="mb-0">{kpi.value}</h3>
-                  </div>
-                  <span className={`badge ${kpi.trend === 'up' ?
-                    'bg-success bg-opacity-10 text-success' :
-                    'bg-danger bg-opacity-10 text-danger'}`}>
-                    <i className={`fas fa-arrow-${kpi.trend} me-1`}></i>
-                    {Math.abs(kpi.change)}%
-                  </span>
-                </div>
-                <div>
-                  <div className="d-flex justify-content-between small mb-1">
-                    <span className="text-muted">Target: {kpi.target}</span>
-                    <span className="fw-bold">{kpi.progress}%</span>
-                  </div>
-                  <div className="progress" style={{ height: '6px' }}>
-                    <div
-                      className={`progress-bar ${kpi.progress > 90 ? 'bg-success' : kpi.progress > 70 ? 'bg-primary' : 'bg-warning'}`}
-                      style={{ width: `${kpi.progress}%` }}
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div key={kpi.id} className="col-12 col-sm-6 col-md-6 col-lg-3 mb-3 mb-lg-0">
+  <div className="card h-100 border-0 shadow-sm">
+    <div className="card-body p-3">
+      <div className="d-flex justify-content-between align-items-start mb-2 mb-md-3">
+        <div>
+          <h6 className="text-muted text-uppercase small mb-1">{kpi.title}</h6>
+          <h3 className="mb-0 fs-4 fs-md-3">{kpi.value}</h3>
+        </div>
+        <span className={`badge ${kpi.trend === 'up' ?
+          'bg-success bg-opacity-10 text-success' :
+          'bg-danger bg-opacity-10 text-danger'} fs-7`}>
+          <i className={`fas fa-arrow-${kpi.trend} me-1`}></i>
+          {Math.abs(kpi.change)}%
+        </span>
+      </div>
+      
+      <div>
+        <div className="d-flex justify-content-between small mb-1">
+          <span className="text-muted">Target: {kpi.target}</span>
+          <span className="fw-bold">{kpi.progress}%</span>
+        </div>
+        <div className="progress" style={{ height: '4px' }}>
+          <div
+            className={`progress-bar ${kpi.progress > 90 ? 'bg-success' : kpi.progress > 70 ? 'bg-primary' : 'bg-warning'}`}
+            style={{ width: `${kpi.progress}%` }}
+            role="progressbar"
+            aria-valuenow={kpi.progress}
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
         ))}
       </div>
 

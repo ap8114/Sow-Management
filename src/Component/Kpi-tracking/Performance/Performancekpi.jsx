@@ -47,7 +47,7 @@ const Performancekpi = () => {
                   <div className="card-body">
                     <div className="d-flex justify-content-between align-items-center mb-3">
                       <h3 className="h5 font-weight-semibold mb-0">
-                        <i className="fas fa-chart-line text-primary mr-2"></i>
+                        <i className="fas fa-chart-line me-2 text-primary mr-2"></i>
                         Revenue Overview
                       </h3>
                       <span className="badge bg-success bg-opacity-10 text-success">+12.5%</span>
@@ -64,7 +64,7 @@ const Performancekpi = () => {
                   <div className="card-body">
                     <div className="d-flex justify-content-between align-items-center mb-3">
                       <h3 className="h5 font-weight-semibold mb-0">
-                        <i className="fas fa-smile text-warning mr-2"></i>
+                        <i className="fas fa-smile me-2 text-warning mr-2"></i>
                         Customer Satisfaction
                       </h3>
                       <span className="text-muted small">Last 30 days</span>
@@ -81,7 +81,7 @@ const Performancekpi = () => {
                   <div className="card-body">
                     <div className="d-flex justify-content-between align-items-center mb-3">
                       <h3 className="h5 font-weight-semibold mb-0">
-                        <i className="fas fa-users text-info mr-2"></i>
+                        <i className="fas fa-users me-2 text-info mr-2"></i>
                         Active Users
                       </h3>
                       <span className="badge bg-success bg-opacity-10 text-success">Live</span>
@@ -98,7 +98,7 @@ const Performancekpi = () => {
                   <div className="card-body">
                     <div className="d-flex justify-content-between align-items-center mb-3">
                       <h3 className="h5 font-weight-semibold mb-0">
-                        <i className="fas fa-exchange-alt text-purple mr-2"></i>
+                        <i className="fas fa-exchange-alt me-2 text-purple mr-2"></i>
                         Conversion Rate
                       </h3>
                       <span className="badge bg-danger bg-opacity-10 text-danger">-2.1%</span>

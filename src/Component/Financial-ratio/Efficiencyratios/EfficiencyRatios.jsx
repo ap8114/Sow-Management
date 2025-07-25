@@ -36,10 +36,10 @@ const EfficiencyRatios = () => {
           <div className="row g-4 mb-4">
             <div className="col-md-4">
               <div 
-                className="p-3 rounded-3 bg-light-blue cursor-pointer" 
+                className="p-3 rounded-3 bg-light-blue cursor-pointer bg-success bg-opacity-10" 
                 onClick={() => setSelectedMetric('inventory')}
               >
-                <div className="d-flex justify-content-between align-items-center mb-2">
+                <div className="d-flex justify-content-between align-items-center mb-2 ">
                   <h3 className="h6 mb-0">Inventory Turnover</h3>
                   <i className="fas fa-boxes text-primary"></i>
                 </div>
@@ -49,7 +49,7 @@ const EfficiencyRatios = () => {
             </div>
             <div className="col-md-4">
               <div 
-                className="p-3 rounded-3 bg-light-blue cursor-pointer" 
+                className="p-3 rounded-3 bg-light-blue cursor-pointer bg-success bg-opacity-10" 
                 onClick={() => setSelectedMetric('receivables')}
               >
                 <div className="d-flex justify-content-between align-items-center mb-2">
@@ -62,7 +62,7 @@ const EfficiencyRatios = () => {
             </div>
             <div className="col-md-4">
               <div 
-                className="p-3 rounded-3 bg-light-blue cursor-pointer" 
+                className="p-3 rounded-3 bg-light-blue cursor-pointer bg-success bg-opacity-10" 
                 onClick={() => setSelectedMetric('asset')}
               >
                 <div className="d-flex justify-content-between align-items-center mb-2">

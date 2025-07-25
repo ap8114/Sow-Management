@@ -24,7 +24,7 @@ const FinancialOverview = () => {
                          <i className="fas fa-plus"></i>
                         <span>Add New OKR</span>
                         </button> */}
-                  <button className="btn btn-outline-secondary d-flex align-items-center gap-2">
+                  <button className="btn btn-outline-secondary d-flex align-items-center gap-2 mb-2">
                     <i className="fas fa-filter"></i>
                     <span>Filter</span>
                   </button>
@@ -89,15 +89,15 @@ const FinancialOverview = () => {
 
             {/* Operating Costs Card */}
             <div className="col-md-3 mb-3">
-              <div className="card bg-purple bg-opacity-10 border-purple border-opacity-25 h-100">
+              <div className="card bg-danger bg-opacity-10 border-danger border-opacity-25 h-100">
                 <div className="card-body">
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <h3 className="h6 text-purple font-weight-medium mb-0">
                       Operating Costs
                     </h3>
-                    <i className="fas fa-wallet text-purple"></i>
+                    <i className="fas fa-wallet text-danger"></i>
                   </div>
-                  <div className="h3 font-weight-bold text-purple">$820K</div>
+                  <div className="h3 font-weight-bold text-danger">$820K</div>
                   <div className="d-flex align-items-center mt-2">
                     <i className="fas fa-arrow-down text-danger me-1"></i>
                     <span className="text-danger small">-5.1%</span>

@@ -163,7 +163,7 @@ const SalesForecastingPage = () => {
 
 
       <div className="row mb-4">
-        <div className="col-md-3">
+        <div className="col-md-3 mb-2">
           <div className="card">
             <div className="card-body">
               <h5 className="card-title text-muted">Total Pipeline</h5>
@@ -171,7 +171,7 @@ const SalesForecastingPage = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-3">
+        <div className="col-md-3 mb-2">
           <div className="card">
             <div className="card-body">
               <h5 className="card-title text-muted">Weighted Forecast</h5>
@@ -179,7 +179,7 @@ const SalesForecastingPage = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-3">
+        <div className="col-md-3 mb-2">
           <div className="card">
             <div className="card-body">
               <h5 className="card-title text-muted">Monthly Target</h5>
@@ -187,7 +187,7 @@ const SalesForecastingPage = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-3">
+        <div className="col-md-3 mb-2">
           <div className="card">
             <div className="card-body">
               <h5 className="card-title text-muted">Achievement</h5>

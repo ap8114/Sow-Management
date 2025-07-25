@@ -41,42 +41,42 @@ const LiquidityRatios = () => {
 
 
           {/* Key Metrics */}
-          <div className="card mb-4">
-            <div className="card-body">
-              <div className="row g-4">
-                <div className="col-md-4">
-                  <div className="bg-light-blue p-3 rounded">
-                    <div className="d-flex justify-content-between align-items-center mb-2">
-                      <h3 className="h6 fw-semibold text-dark mb-0">Current Ratio</h3>
-                      <i className="fas fa-wallet text-primary fs-4"></i>
-                    </div>
-                    <p className="h2 fw-bold text-primary mb-1">2.5</p>
-                    <p className="small text-muted mb-0">Benchmark: &gt; 2.0</p>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="bg-light-blue p-3 rounded">
-                    <div className="d-flex justify-content-between align-items-center mb-2">
-                      <h3 className="h6 fw-semibold text-dark mb-0">Quick Ratio</h3>
-                      <i className="fas fa-bolt text-primary fs-4"></i>
-                    </div>
-                    <p className="h2 fw-bold text-primary mb-1">1.8</p>
-                    <p className="small text-muted mb-0">Benchmark: &gt; 1.0</p>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="bg-light-blue p-3 rounded">
-                    <div className="d-flex justify-content-between align-items-center mb-2">
-                      <h3 className="h6 fw-semibold text-dark mb-0">Cash Ratio</h3>
-                      <i className="fas fa-coins text-primary fs-4"></i>
-                    </div>
-                    <p className="h2 fw-bold text-primary mb-1">0.8</p>
-                    <p className="small text-muted mb-0">Benchmark: &gt; 0.5</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div className="card mb-4 border-0">  {/* Added border-0 here to remove border */}
+  <div className="card-body bg-light p-0">  {/* Added p-0 to remove default padding */}
+    <div className="row g-4 bg-light p-3">  {/* Added p-3 to maintain spacing */}
+      <div className="col-md-4">
+        <div className="bg-light-blue p-3 rounded bg-success bg-opacity-10">
+          <div className="d-flex justify-content-between align-items-center mb-2">
+            <h3 className="h6 fw-semibold text-dark mb-0">Current Ratio</h3>
+            <i className="fas fa-wallet text-primary fs-4"></i>
           </div>
+          <p className="h2 fw-bold text-primary mb-1">2.5</p>
+          <p className="small text-muted mb-0">Benchmark: &gt; 2.0</p>
+        </div>
+      </div>
+      <div className="col-md-4">
+        <div className="bg-light-blue p-3 rounded bg-success bg-opacity-10">
+          <div className="d-flex justify-content-between align-items-center mb-2">
+            <h3 className="h6 fw-semibold text-dark mb-0">Quick Ratio</h3>
+            <i className="fas fa-bolt text-primary fs-4"></i>
+          </div>
+          <p className="h2 fw-bold text-primary mb-1">1.8</p>
+          <p className="small text-muted mb-0">Benchmark: &gt; 1.0</p>
+        </div>
+      </div>
+      <div className="col-md-4">
+        <div className="bg-light-blue p-3 rounded bg-success bg-opacity-10">
+          <div className="d-flex justify-content-between align-items-center mb-2">
+            <h3 className="h6 fw-semibold text-dark mb-0">Cash Ratio</h3>
+            <i className="fas fa-coins text-primary fs-4"></i>
+          </div>
+          <p className="h2 fw-bold text-primary mb-1">0.8</p>
+          <p className="small text-muted mb-0">Benchmark: &gt; 0.5</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
           {/* Ratio Components Table */}
           <div className="card">
