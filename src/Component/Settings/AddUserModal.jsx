@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 const AddUserModal = ({ isOpen, onClose, formData, setFormData, onSubmit }) => {
   if (!isOpen) return null;
 
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(true);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(true);
 
   return (
     <div className="modal fade show" style={{ display: 'block', backgroundColor: 'rgba(0,0,0,0.5)' }}>
@@ -53,7 +53,7 @@ const AddUserModal = ({ isOpen, onClose, formData, setFormData, onSubmit }) => {
               <div className="form-group mb-3 position-relative">
                 <label>Password</label>
                 <input
-                  type={showPassword ? 'text' : 'password'}
+                  type={!showPassword ? 'text' : 'password'}
                   required
                   value={formData.password}
                   onChange={(e) => setFormData({ ...formData, password: e.target.value })}
@@ -69,7 +69,7 @@ const AddUserModal = ({ isOpen, onClose, formData, setFormData, onSubmit }) => {
               <div className="form-group mb-3 position-relative">
                 <label>Confirm Password</label>
                 <input
-                  type={showConfirmPassword ? 'text' : 'password'}
+                  type={!showConfirmPassword ? 'text' : 'password'}
                   required
                   value={formData.confirmPassword}
                   onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
