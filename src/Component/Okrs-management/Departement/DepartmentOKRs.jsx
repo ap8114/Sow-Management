@@ -4,7 +4,7 @@ const DepartmentOKRs = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className="container-fluid px-3 px-md-4 py-3">
+    <div className="">
       {/* Header Section */}
       <div className="mb-3 mb-md-4">
         <h1 className="h2 fw-bold mb-1 mb-md-2">Department OKRs</h1>
