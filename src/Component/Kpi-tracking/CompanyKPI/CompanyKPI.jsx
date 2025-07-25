@@ -119,7 +119,7 @@ const CompanyKPI = () => {
       {/* Header Section */}
       <div className="row mb-4">
         <div className="col-md-6">
-          <h1 className="h2 fw-bold mb-2">Company KPI Dashboard</h1>
+          <h3 className=" fw-bold mb-2">Company KPI Dashboard</h3>
           <p className="text-muted mb-0">
             <i className="fas fa-clock me-2"></i>
             Last updated: July 23, 2025 at 09:30 AM

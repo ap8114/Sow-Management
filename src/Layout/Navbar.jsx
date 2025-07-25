@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FaBell, FaSearch, FaUserCircle, FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import "./Navbar.css";
 // import logo from "./your-logo-path.png"; // Replace with your logo path
 
 const Navbar = ({ toggleSidebar }) => {
@@ -18,23 +19,25 @@ const Navbar = ({ toggleSidebar }) => {
   }, []);
 
   return (
-    <nav className="navbar navbar-expand px-3 py-2 bg-light shadow-sm d-flex justify-content-between align-items-center fixed-top ">
+    <nav className="navbar navbar-expand px-3 py-2  shadow-sm d-flex justify-content-between align-items-center fixed-top " >
       {/* Sidebar Toggle + Logo */}
-      <div className="d-flex align-items-center gap-3">
+      <div className="d-flex align-items-center gap-4">
+
+          {/* Logo */}
+        <img
+          src="https://i.ibb.co/k2pNKGWG/sow-logo-sow-letter-sow-letter-logo-design-initials-sow-logo-linked-with-circle-uppercase-monogram-l.png"
+          alt="Logo"
+          className="navbar-logo img-fluid"
+          style={{height:"50px" , width: "70px"}}
+          />
         {/* Toggle Button - Always visible */}
         <button
-          className="btn btn-outline-secondary p-2"
+          className="btn  text-white p-3"
           onClick={toggleSidebar}
         >
           <FaBars />
         </button>
-        {/* Logo */}
-        <img
-          src="https://i.ibb.co/KpK30Yxz/image-removebg-preview.png"
-          alt="Logo"
-          className="navbar-logo img-fluid"
-          style={{height:"40px" , width: "70px"}}
-          />
+      
       </div>
 
       {/* Search */}
@@ -61,7 +64,7 @@ const Navbar = ({ toggleSidebar }) => {
       <div className="d-flex align-items-center gap-3 position-relative">
         {/* Notification */}
         <div className="position-relative">
-          <FaBell size={18} className="text-dark" />
+          <FaBell size={18} className="text-white" />
           <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
             3
           </span>
@@ -74,10 +77,10 @@ const Navbar = ({ toggleSidebar }) => {
             role="button"
             onClick={() => setDropdownOpen(!dropdownOpen)}
           >
-            <FaUserCircle size={24} className="text-dark" />
+            <FaUserCircle size={24} className="text-white" />
             <div className="d-none d-sm-block">
-              <small className="text-muted mb-0">Welcome</small>
-              <div className="fw-bold">Admin</div>
+              <small className="text-white mb-0">Welcome</small>
+              <div className="text-white">Admin</div>
             </div>
           </div>
 
