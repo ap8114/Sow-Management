@@ -23,13 +23,13 @@ const Navbar = ({ toggleSidebar }) => {
       {/* Sidebar Toggle + Logo */}
       <div className="d-flex align-items-center gap-4">
 
-          {/* Logo */}
+        {/* Logo */}
         <img
           src="https://i.ibb.co/k2pNKGWG/sow-logo-sow-letter-sow-letter-logo-design-initials-sow-logo-linked-with-circle-uppercase-monogram-l.png"
           alt="Logo"
           className="navbar-logo img-fluid"
-          style={{height:"50px" , width: "70px"}}
-          />
+          style={{ height: "50px", width: "70px" }}
+        />
         {/* Toggle Button - Always visible */}
         <button
           className="btn  text-white p-3"
@@ -37,7 +37,7 @@ const Navbar = ({ toggleSidebar }) => {
         >
           <FaBars />
         </button>
-      
+
       </div>
 
       {/* Search */}
